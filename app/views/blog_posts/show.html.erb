@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @blog_post.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog_post.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @blog_post.subtitle %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @blog_post.body %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @blog_post.tags %>
+</p>
+
+<p>
+  <strong>Image path:</strong>
+  <%= @blog_post.image_path %>
+</p>
+
+<p>
+  <strong>Article link:</strong>
+  <%= @blog_post.article_link %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @blog_post.author %>
+</p>
+
+<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+<%= link_to 'Back', blog_posts_path %>
