@@ -1,0 +1,1368 @@
+/* General formatting */
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+.centered {
+  text-align: center;
+}
+
+.left-align-text {
+  text-align: left;
+}
+/*************************** START NAVBAR SECTION *****************************/
+/*.nav li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}*/
+
+/* Remove vertical scroll bar when in collapsed mode and selection of social media*/
+
+.navbar-fixed-top .navbar-collapse {
+   max-height: 500px;
+   text-align: left;
+}
+
+a.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.navbar {
+  background-color: transparent;
+  background: black;
+  /*background: transparent;*/
+  /*background: #22A7F0; /* blue */ */
+  border-color: transparent;
+  opacity: .8;
+  /*background-color: #33CCCC;*/
+  /*background-color: #0099FF; /* -- Slightly darker blue */*/
+  /*background-color: #00CCFF; /* Lighter blue *?*/
+  /*background-color: #0099CC; /* blue */*/
+  /*background-color: #00E6B8;*/
+  /*background-color: #1fa67a;*/
+  /*border-bottom: solid 3px black; --*/
+}
+/*.navbar .menu-items > a {*/
+.navbar li a span{
+  color: white;
+  /*font-weight: bold;*/
+  font-size: 20px;
+}
+
+/*.navbar .nav-pills .active > a {*/
+/*li.menu-items.active>a {*/
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+
+/*.navbar li .active a span {*/
+    /*background-color:#ccc;*/
+    background-color: #22A7F0;
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+/***************************  END NAVBAR SECTION  *****************************/
+/*  START HEADER SECTION*/
+/**********************  New stuff *****************/
+
+/*------------------ CSS for Buttons "Link-1" ----------------*/
+a, a:hover, a:focus {
+	color: #21ccec;
+	text-decoration: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+img { max-width: 100%; }
+
+::-moz-selection { background: #21ccec; color: #fff; text-shadow: none; }
+::selection { background: #21ccec; color: #fff; text-shadow: none; }
+
+
+/*------------------ CSS for Button "Link-1" ----------------*/
+.call-to-action {
+  text-align: center;
+  margin-top: 2.5em;
+  /*margin-bottom: 10em;*/
+}
+.big-link-1 {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 15px 20px;
+	background: #22A7F0;
+	border: 0;
+  z-index: 1;
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #fff;
+    text-transform: uppercase;
+    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+}
+
+.big-link-1:hover, .big-link-1:active .big-link-1:focus,  { outline: 0; opacity: 0.6; color: #fff; }
+
+.big-link-2 {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 14px 19px;
+	background: none;
+	border: 1px solid #fff;
+  /*z-index: 1;*/
+	font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #fff;
+    text-transform: uppercase;
+    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+}
+.big-link-2:hover, .big-link-2:focus, .big-link-2:active, .big-link-2:active:focus { outline: 0; opacity: 0.6; background: none; color: #fff; }
+
+.pricing-box-sign-up .big-link-1,
+.pricing-box-sign-up .big-link-1:active:focus {
+	background: #21ccec;
+}
+
+/*------------------ End Button Stuff ----------------------*/
+.smooth-scroll {
+  margin: 0px;
+}
+/*.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}*/
+div.header-background1 {
+  background: url(<%=asset_path("night-time-downtown-San-Diego.jpg")%>) no-repeat center center;
+  /* ##Modify - changed line above. Delete this line*/
+  /*background: url("../img/night-time-downtown-San-Diego.jpg") no-repeat center center;*/
+
+  padding-top: 6vw;
+  padding-bottom: 5vw;
+  border-bottom: solid black;
+  opacity: .8;
+  position: relative;
+  background-size: cover;
+  /*background-color:rgba(255,255,255,0.2);*/
+  margin-right: -15px;
+  margin-left: -15px;
+  /*max-height: 800px;
+  /*min-height: 450px;*/
+    /*-webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;*/
+  }
+  .header-background1 .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*min-height: 975px;*/
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.9);
+    background: #212121;
+      -webkit-opacity: .4;
+      -moz-opacity: .4;
+      opacity: .8;
+      -ms-filter: "alpha(Opacity=70)";
+      filter: alpha(opacity=70);
+      z-index: 90;
+}
+.header-background1 .banner-content {
+  position: relative;
+  z-index: 100;
+}
+
+div.header-background {
+    position: relative;
+    /*background: #5C97FF;*/
+    /*background: #000000; /* Black */
+    background: #707070; /* Dark Grey  */
+    /*background: #999999; /* Light Gray */
+    overflow: hidden;
+    padding-top: 5em;
+    padding-bottom: 3em;
+    border-bottom-color: black;
+    border-style: solid;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+div.header-background::after {
+  background-image: url(<%=asset_path('night-time-downtown-San-Diego.jpg')%>); <!-- no-repeat center top; -->
+  /* ##Modify - changed line above. Delete this line*/
+  /*background-image: url("../img/night-time-downtown-San-Diego.jpg"); <!-- no-repeat center top; -->*/
+
+  /*background-repeat: repeat-none;*/
+  padding-top: 100px;
+   content: ' ';
+   display: block;
+   position: absolute;
+   /*position: relative;*/
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0.1;
+   z-index: -1;
+   /*background-image: url("../img/night-time-downtown-San-Diego.jpg"); <!-- no-repeat center top; -->*/
+   /*background-image: url("../img/SD-Paragliders.jpg"); <!-- no-repeat center top; -->*/
+   /*background-repeat: no-repeat;*/
+   /*background-position: 50% 0;*/
+     /*background-size: 100% 100%;*/
+   -ms-background-size: contain;
+   -o-background-size: contain;
+   -moz-background-size: contain;
+   -webkit-background-size: contain;
+   background-size: contain;
+  /*background-image: url("../img/night-time-downtown-San-Diego.jpg"); <!-- no-repeat center top; -->
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 300px;
+  width: 100%;
+  border-style: solid;
+  border-bottom-color: black;
+  opacity: 0.4;
+  padding: 75px;
+  color: white;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;*/
+}
+
+
+div.photo {
+  /*position: absolute; /* Test */*/
+  text-align: center;
+  height: 100%;
+  height: inherit;
+  vertical-align: middle;
+  z-index: 1;
+
+}
+
+.my-photo {
+  /*position: center;*/
+  /*height: 17em;
+  width: 17em;*/
+  border: solid black 1px;
+  /*margin: 0px;*/
+  /*height: 100%;*/
+  /*vertical-align: middle;*/
+  /*height: inherit;*/
+}
+
+
+.giant-text {
+  /*font-size: 8em;*/
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  margin: 0px;
+}
+.logo-style {
+  text-align: center;
+  /*height: 20vw;
+  width: 30vw;*/
+  margin: 3em auto;
+
+}
+.banner-text { /* mod delete .image-holder */
+  /*font-weight: bold;*/
+  text-align: center;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 600;
+  /*margin-bottom: 0px;*/
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.services h4 {
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+.services i {
+  color: white;
+  font-size: 2em;
+}
+
+.services-sub-head {
+  text-size: 30px;
+}
+.sub-head {
+  /*font-size: 3.5vw;*/
+  font-size: 3.5em;
+  /*font-style: italic;*/
+  /*letter-spacing: .03em; */
+  font-weight: 300;
+  text-align: center;
+}
+.sub-title {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  letter-spacing: .1em;
+  word-spacing: 2px;
+  /*font-weight: lighter;*/
+  /*margin-top: .02em;*/
+  /*margin: auto;*/
+}
+.call-to-action-text {
+  font-size: 23px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  font-style: italic;
+  /*font-weight: bold;*/
+}
+/*.sub-columns {
+  font-size: 2vw;
+}*/
+.header-separator {
+  /*margin: 1.8em auto 1.8em;*/
+  /*margin-bottom: 5em;*/
+  padding: 0;
+  max-width: 35vw;
+  border: 0;
+  border-top: solid 1px;
+  text-align: center;
+  overflow: visible;
+}
+.header-separator::after {
+  text-align: center;
+  color: #fff;
+  /*background-color: #0099CC; /* Originalblue */
+  /*background-color: #0099FF; /* brighter blue */
+  background-color: #22A7F0; /* match .active color */
+  /*background-color: #18bc9c; /* green */
+  display: inline-block;
+  position: relative;
+  top: -.8em;
+  padding: 0 .25em;
+  font-family: 'Glyphicons Halflings';
+  font-size: 1.4em;
+  content: "\e007";
+}
+.header-end-separator {
+  /*margin: 1.8em auto 1.8em;*/
+  margin-top: 2em;
+  padding: 0;
+  max-width: 35vw;
+  border: 0;
+  border-top: solid 1px;
+  text-align: center;
+  overflow: visible;
+}
+@media screen and (min-width: 100px) {
+  .logo-style {
+    height: 6em;
+    width: 9em;
+  }
+  .my-photo {
+    height: 12em;
+    width: 12em;
+  }
+  .giant-text {
+    font-size: 2.5em;
+    margin-bottom: .9em;
+  }
+  .sub-head {
+    margin-top: .9em;
+    letter-spacing: .02em;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  .sub-title {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  /*.contact-form {
+    margin-top: 0em;
+  }*/
+  .call-to-action {
+    font-size: .9em;
+  }
+}
+@media screen and (min-width: 320px) {
+  .logo-style {
+    height: 6em;
+    width: 9em;
+  }
+  .my-photo {
+    height: 7em;
+    width: 7em;
+  }
+  .giant-text {
+    font-size: 2.5em;
+    margin-bottom: .9em;
+  }
+  .sub-head {
+    margin-top: .9em;
+    letter-spacing: .02em;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  .sub-title {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  /*.contact-form {
+    margin-top: 0em;
+  }*/
+  .call-to-action {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .logo-style {
+    height: 12em;
+    width: 15em;
+  }
+  .my-photo {
+    height: 10em;
+    width: 10em;
+  }
+  .giant-text {
+    font-size: 3em;
+  }
+  .sub-head {
+    margin: auto;
+    letter-spacing: .02em;
+    font-size: 2.0em;
+    padding: 0;
+  }
+  .sub-title {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  /*.contact-form {
+    margin-top: 0em;
+  }*/
+  /*.call-to-action-text {
+    font-size: .9em;
+  }*/
+}
+@media screen and (min-width: 475px) {
+
+  .logo-style {
+    height: 12em;
+    width: 15em;
+  }
+  .my-photo {
+    height: 12em;
+    width: 12em;
+  }
+  .giant-text {
+    margin: auto;
+    font-size: 3em;
+  }
+  .sub-head {
+    margin: auto;
+    letter-spacing: .02em;
+    font-size: 2.5em;
+    padding: 0;
+    font-style: oblique;
+    font-weight: 300;
+  }
+  .sub-title {
+    font-size: 1.7em;
+    text-align: center;
+  }
+  /*.contact-form {
+    margin-top: 2em;
+  }*/
+  /*.call-to-action-text {
+    font-size: .9em;
+  }*/
+}
+
+
+@media screen and (min-width: 610px) {
+
+  .logo-style {
+    height: 15em;
+    width: 18.75em;
+  }
+  .my-photo {
+    height: 12em;
+    width: 12em;
+  }
+  .giant-text {
+    margin: auto;
+    font-size: 4em;
+  }
+  .sub-head {
+    margin: auto;
+    letter-spacing: .02em;
+    font-size: 2.5em;
+    padding: 0;
+  }
+  .sub-title {
+    font-size: 1.7em;
+    text-align: center;
+  }
+  /*.contact-form {
+    margin-top: 2em;
+  }*/
+  /*.call-to-action-text {
+
+  }*/
+}
+@media screen and (min-width: 1070px) {
+
+  .logo-style {
+    height: 18em;
+    width: 22.5em;
+  }
+  .my-photo {
+    height: 12em;
+    width: 12em;
+  }
+  .giant-text {
+    margin-bottom: .9em;
+    /*letter-spacing: .03em;*/
+    font-size: 5em;
+    padding: 0;
+  }
+  .sub-head {
+    margin-top: .9em;
+    letter-spacing: .02em;
+    font-size: 3.0em;
+    padding: 0;
+  }
+  .sub-title {
+    font-size: 2.0em;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1580px) {
+
+  .logo-style {
+    height: 18em;
+    width: 22.5em;
+  }
+  .my-photo {
+    height: 12em;
+    width: 12em;
+  }
+
+  .giant-text {
+    margin-bottom: .2em;
+    /*letter-spacing: .001em;*/
+    font-size: 6em;
+    padding: 0;
+  }
+  .smaller-text {
+    font-size: 3em;
+    text-decoration: underline;
+  }
+  .sub-head {
+    margin-top: 40px;
+    /*margin-bottom: 40px;*/
+    letter-spacing: .01em;
+    /*font-size: 4em;*/
+    padding: 0;
+  }
+  .sub-title {
+    font-size: 2.75em;
+    text-align: center;
+  }
+}
+
+/**************  START SUB-HEADER SECTION OF BANNER **************/
+
+.sub-column-heading {
+  font-weight: bold;
+  text-decoration: underline;
+  /*font-size: 1.5em;*/
+}
+
+.section-description {
+  margin-bottom: 35px;
+}
+/*@media all and (max-device-width: 720px){
+    h1.banner-text {
+        font-size: 100px;
+        font-weight: bold;
+    }
+}
+
+@media all and (max-device-width: 640px){
+    h1.banner-text {
+        font-size: 75px;
+        font-weight: bold;
+    }
+}
+
+@media all and (max-device-width: 320px){
+    h1.banner-text {
+        font-size: 35px;
+        font-weight: bold;
+    }
+}*/
+/*  END HEADER SECTION*/
+/**************  END SUB-HEADER SECTION OF BANNER **************/
+
+/******************** WEB SEPARATOR - SMOOTH SCROLL ***********************/
+
+.wrapper1 {
+  /*border-bottom: solid #22A7F0 2vw;*/
+  border-bottom: solid black 2vw;
+  margin: 0px;
+}
+.div-separator {
+ padding: 50px;
+}
+
+/******************** WHAT WE DO SECTION ***********************/
+#about {
+  /*margin-right: auto;
+  margin-left: auto;*/
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.web-section-separator {
+  margin: 2.5em auto 3.5em;
+  padding: 0;
+  max-width: 75vw;
+  border: 0;
+  border-top: solid darkgrey 1px;
+  text-align: center;
+  overflow: visible;
+}
+.services-text {
+  text-align: left;
+  line-height:1.3;
+  word-spacing: 1.5px;
+  font-weight: 300;
+}
+.services-section span {
+  /*font-size: 2.0em;*/
+  color: #22A7F0;
+}
+
+.about-me-container-buffer {
+  /*padding-bottom: 250px;*/
+  /*max-height: 350px;*/
+  /*margin-bottom: 1.9em;*/
+  margin-bottom: 0px;
+}
+
+
+.block-3-box-icon .block-3-box-icon-number {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: 32px;
+  height: 32px;
+  background: #ddd;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  line-height: 32px;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+.block-3-box .block-3-box-icon i, .block-3-box .block-3-box-icon span {
+  vertical-align: middle;
+}
+
+
+
+.block-3-box .block-3-box-icon i, .block-3-box .block-3-box-icon span {
+  vertical-align: middle;
+}
+
+.block-3-box .block-3-box-icon {
+  position: relative;
+  font-size: 80px;
+  color: #444;
+  line-height: 80px;
+}
+.block-3-box .block-3-box-icon-blue {
+  color: #21ccec;
+}
+
+.block-3-box .block-3-box-icon-violet {
+  color: #a151ea;
+}
+
+.block-3-box .block-3-box-icon-blue { color: #21ccec; }
+.block-3-box .block-3-box-icon-violet { color: #a151ea; }
+
+.block-3-box:hover .block-3-box-icon-blue .block-3-box-icon-number { background: #21ccec; }
+.block-3-box:hover .block-3-box-icon-violet .block-3-box-icon-number { background: #a151ea; }
+
+/******************** WEB CONTENT SECTIONS ***********************/
+
+
+
+
+
+/* Standalone city-scape scene */
+
+#city-scape {
+  background: url(<%=asset_path("night-time-downtown-San-Diego.jpg")%>); /* no-repeat center center; */
+  opacity: 0.7;
+  border: solid;
+  min-height: 200px;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+
+/* Standalone city-scape scene */
+
+#city-skyline {
+  background: url(<%=asset_path("san-diego-city-skyline-image.jpg")%>) no-repeat center center;
+  /* ##Modify line above. Delete this line*/
+  /*background: url("../img/san-diego-city-skyline-image.jpg") no-repeat center center; */
+  opacity: 0.7;
+  border: solid;
+  min-height: 200px;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+  }
+  #ob-pier {
+    /*background: url("../img/ocean-beach-pier.jpg") no-repeat center center;*/
+    background: url(<%=asset_path("ocean-beach-pier.jpg")%>);  /* no-repeat center center; */
+    opacity: 0.7;
+    border: solid;
+    min-height: 200px;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+    }
+
+.image-container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.webpage-separator {
+  /*font-size: 4.5vw;*/
+  max-width: 100%;
+  border-top: solid 2vw;
+  /*margin-top: 1vw;*/
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+/******************** NEW PORTFOLIO SECTION ***********************/
+/*.img-thumbnail {
+  padding: 10px;
+} */
+
+.portfolio-elements {
+  -webkit-animation-duration: 2s;
+}
+.post-box {
+  margin: 45px 0 15px 0;
+  /*width: 300px;
+  height: 200px;*/
+  /*width: 100%;*/
+  /*z-index: 101;*/
+}
+.center-it {
+  width: 50%;
+  margin: 0 auto;
+}
+.left-align-text {
+  text-align: left;
+}
+
+/*  CSS from http://tympanus.net/codrops/2011/11/02/original-hover-effects-with-css3/ */
+
+.img-thumbnail {
+  width: 300px;
+  height: 200px;
+}
+/*.main {
+  position: relative;
+  width: 680px;
+  margin: 0 auto;
+}*/
+
+/*    Style Common */
+.view {
+   /*width: 300px;
+   height: 200px;*/
+   margin: 10px;
+   float: left;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+   /*background: #fff url(../images/bgimg.jpg) no-repeat center center;*/
+}
+.view .mask,.view .content {
+   /*width: 300px;
+   height: 200px;*/
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 20px 0 0 0;
+}
+.view p {
+   font-family: Georgia, serif;
+   font-style: italic;
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+.view a.info {
+   display: inline-block;
+   text-decoration: none;
+   padding: 7px 14px;
+   background: #000;
+   color: #fff;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.view a.info: hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+/*   End Style Common */
+
+/*     Style1     */
+.view-first img {
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   height: 100%;
+   background-color: rgba(219,127,8, 0.7);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+   -webkit-transform: translateY(-100px);
+   -moz-transform: translateY(-100px);
+   -o-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+   transform: translateY(-100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-first p {
+   -webkit-transform: translateY(100px);
+   -moz-transform: translateY(100px);
+   -o-transform: translateY(100px);
+   -ms-transform: translateY(100px);
+   transform: translateY(100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first:hover img {
+   -webkit-transform: scale(1.1,1.1);
+   -moz-transform: scale(1.1,1.1);
+   -o-transform: scale(1.1,1.1);
+   -ms-transform: scale(1.1,1.1);
+   transform: scale(1.1,1.1);
+}
+.view-first a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-first:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+}
+.view-first:hover p {
+   -webkit-transition-delay: 0.1s;
+   -moz-transition-delay: 0.1s;
+   -o-transition-delay: 0.1s;
+   -ms-transition-delay: 0.1s;
+   transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+   -webkit-transition-delay: 0.2s;
+   -moz-transition-delay: 0.2s;
+   -o-transition-delay: 0.2s;
+   -ms-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+/*     Style1 End */
+#projects {
+  /*margin-right: auto;
+  margin-left: auto;*/
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.portfolio-background-image {
+  background: white url(<%=asset_path("beach-sand-texture.jpg")%>) no-repeat center center;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /*.portfolio-background-image .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+      -webkit-opacity: .4;
+      -moz-opacity: .4;
+      opacity: .2;
+      -ms-filter: "alpha(Opacity=70)";
+      filter: alpha(opacity=70);
+      z-index: 90;
+}*/
+/*.portfolio-background-image {*/
+  /*position: relative;*/
+  /*z-index: 100;
+}*/
+ .portfolio-1 {
+   background-color: rgba(255,255,255,0.85);
+   background-size: cover;
+ }
+
+
+
+
+/*------------------------------------------------------------------------------------*/
+
+/*************** END NEW PORFOLIO SECTION  ***********************/
+
+/*------------------Blog Section ---------------------------------*/
+.blog-elements {
+  -webkit-animation-duration: 2s;
+}
+
+#blog {
+  /*margin-right: auto;
+  margin-left: auto;*/
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.water-background-image {
+  background: white url(<%=asset_path("clear-water.jpg")%>) no-repeat center center;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 2px;
+  /*margin-right: -15px;
+  margin-left: -15px;*/
+
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .water-image-mask {
+    background-color: rgba(255,255,255,0.7);
+    background-size: cover;
+  }
+/*-----------------End Blog Section ------------------------------*/
+
+.portfolio-separator {
+  margin: 2.5em auto 3.5em;
+  padding: 0;
+  max-width: 75vw;
+  border: 0;
+  border-top: solid darkgrey 1px;
+  text-align: center;
+  overflow: visible;
+}
+.portfolio-separator::after {
+  text-align: center;
+  color: #fff;
+  /* background-color: #0099CC; */ /* blue */
+  background-color: #22A7F0; /* blue */
+
+  /*background-color: #18bc9c; /* green */*/
+  display: inline-block;
+  position: relative;
+  top: -.6em;
+  padding: 0 .25em;
+  font-family: 'Glyphicons Halflings';
+  /*font-size: 2.5em;*/
+  font-size: 38px;
+  margin-top: auto;
+  content: "\e139";
+}
+
+.blog-separator {
+  margin: 2.5em auto 3.5em;
+  padding: 0;
+  max-width: 75vw;
+  border: 0;
+  border-top: solid darkgrey 1px;
+  text-align: center;
+  overflow: visible;
+}
+.blog-separator::after {
+  text-align: center;
+  color: #fff;
+  /* background-color: #0099CC; */ /* blue */
+  background-color: #22A7F0; /* blue */
+
+  /*background-color: #18bc9c; /* green */*/
+  display: inline-block;
+  position: relative;
+  top: -.6em;
+  padding: 0 .25em;
+  font-family: 'Glyphicons Halflings';
+  /*font-size: 2.5em;*/
+  font-size: 38px;
+  margin-top: auto;
+  content: "\e043";
+}
+/*    Test of eliminating duplication in separator (i.e., unique for each)*/
+.separator-line {
+  /*margin: 25px auto 50px;*/
+  margin: 2.5em auto 3.5em;
+  /*margin-top: 1.0em;
+  margin-bottom: 1.5em;*/
+  padding: 0;
+  max-width: 75vw;
+  border: 0;
+  border-top: solid black 1px;
+  text-align: center;
+  overflow: visible;
+}
+.separator-line::after {
+  text-align: center;
+  color: #fff;
+  background-color: #0099CC; /* blue */
+  /*background-color: #18bc9c; /* green */*/
+  display: inline-block;
+  position: relative;
+  top: -.6em;
+  padding: 0 .25em;
+  font-family: 'Glyphicons Halflings';
+  /*font-size: 2.5em;*/
+  font-size: 38px;
+  margin-top: auto;
+  content: attr(data-content);
+}
+
+
+/*                        */
+.contact-separator {
+  margin: 2.5em auto 3.5em;
+  padding: 0;
+  max-width: 75vw;
+  border: 0;
+  border-top: solid 1px;
+  text-align: center;
+  overflow: visible;
+}
+.contact-separator::after {
+  text-align: center;
+  color: #fff;
+  /* background-color: #0099CC; */ /* blue */
+  background-color: #22A7F0; /* blue */
+  /*background-color: #18bc9c; /* green */*/
+  display: inline-block;
+  position: relative;
+  top: -.6em;
+  padding: 0 .25em;
+  font-family: 'Glyphicons Halflings';
+  /*font-size: 2.5em;*/
+  font-size: 38px;
+  margin-top: auto;
+  content: "\2709";
+}
+.section-header-style {
+  margin-top: 0px;
+  text-align: center;
+  font-weight: bold;
+  /*font-size: 3.0em;*/
+  font-size: 38px;
+  text-transform: uppercase;
+  padding-top: 1.5vw;
+  margin-bottom: 2.5vw;
+  font-family: 'Montserrat', sans-serif;
+}
+/*div.lav-background {
+  background-color: #b0c4de;
+  background-image: url("../img/BlacksBeach.jpg") no-repeat center top;
+  opacity: 0.4;
+}*/
+
+
+#sd-beach-scene {
+	background: url(<%=asset_path("SD-Paragliders.jpg")%>) no-repeat center top;
+  /* ##Modified line above - delete this line*/
+  /*background: url("../img/SD-Paragliders.jpg") no-repeat center top;*/
+
+	/*padding-top: 100px;*/
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 450px;
+  max-height: 950px;
+	width: 100%;
+  opacity: 0.9;
+	color: white;
+  /*border: solid 2px;*/
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+}
+
+
+div.lav-background {
+  background-color: #b0c4de;
+}
+
+div.off-white-background {
+  background-color: #FAF0E6; /* Linen */
+}
+/*.smooth-scroll {
+  margin-bottom: 3.75em;
+}*/
+.center-block {
+  /*margin-bottom: 2.0em;*/
+}
+/*.contact-form {
+  margin-bottom: 30em;
+}*/
+
+/* Logo stuff*/
+.logo-text {
+  /*width:200px;*/
+  /*border:4px solid #222;*/
+  /*height:200px;*/
+  /*text-align: right;*/
+  position: absolute;
+  text-align: center;
+  float: left;
+}
+.design-logo-part {
+  font-size: 45px;
+  /*position: absolute;*/
+  text-align: right;
+  float: right;
+}
+.text-rotation {
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -moz-transform:rotate(270deg); /* Firefox */
+  /*-webkit-transform-origin: right bottom;*/
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  -o-transform:rotate(270deg); /* Opera */
+}
+
+.contact-form {
+  margin-top: 0em;
+  margin-bottom: 5em;
+}
+.contact-form form button {
+  width: 100%;
+}
+button.btn {
+  height: 52px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  /*background: #21ccec;*/
+  background: #22A7F0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 52px;
+  color: #fff;
+  text-transform: uppercase;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+/* FOOTER */
+#footer {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: #22A7F0;
+}
+
+#footer i {
+	margin-right: 30px;
+	font-size: 35px;
+}
+
+#footer a {
+	color: white;
+}
+/*.centered {
+  text-align: center;
+}*/
+/* -------------------------Test with image opacity -------------------- */
+.my-container {
+    position: relative;
+    overflow: hidden;
+}
+.my-container h1 {
+    padding: 200px;
+    position: relative;
+    z-index: 2;
+}
+.my-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+#image {
+    display: inline-block;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url(<%=asset_path("1night-time-downtown-San-Diego.jpg")%>);
+    /* ##Modified line above - deleted this line*/
+    /*background-image: url("../img/1night-time-downtown-San-Diego.jpg");*/
+
+    /*opacity: .6;*/
+}
+#image-inner {
+    display: block;
+    height: 0;
+    padding-top: 63.3%;
+}
+div.image-holder {
+  display: block;
+}
+.image-holder {
+  position: relative;
+}
+/*body {
+  font-weight: 300px;
+}*/

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   resources :portfolio_images
   resources :portfolio_items
   resources :blog_posts
