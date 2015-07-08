@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -42,3 +43,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added for Heroku deployment per https://devcenter.heroku.com/articles/getting-started-with-rails4
+gem 'rails_12factor', group: :production
+
+# Per Heroku I set Ruby version set to 2.0.0 Per https://devcenter.heroku.com/articles/rails4
+ruby "2.1.5"
