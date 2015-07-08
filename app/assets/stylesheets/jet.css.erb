@@ -149,9 +149,6 @@ img { max-width: 100%; }
 }*/
 div.header-background1 {
   background: url(<%=asset_path("night-time-downtown-San-Diego.jpg")%>) no-repeat center center;
-  /* ##Modify - changed line above. Delete this line*/
-  /*background: url("../img/night-time-downtown-San-Diego.jpg") no-repeat center center;*/
-
   padding-top: 6vw;
   padding-bottom: 5vw;
   border-bottom: solid black;
@@ -226,7 +223,6 @@ div.header-background::after {
 }
 
 div.photo {
-  /*position: absolute; /* Test */*/
   text-align: center;
   height: 100%;
   height: inherit;
@@ -700,7 +696,7 @@ div.photo {
 /* Standalone city-scape scene */
 
 #city-scape {
-  background: url(<%=asset_path("night-time-downtown-San-Diego.jpg")%>); /* no-repeat center center; */
+  background: url(<%=asset_path("night-time-downtown-San-Diego.jpg")%>);
   opacity: 0.7;
   border: solid;
   min-height: 200px;
@@ -715,8 +711,6 @@ div.photo {
 
 #city-skyline {
   background: url(<%=asset_path("san-diego-city-skyline-image.jpg")%>) no-repeat center center;
-  /* ##Modify line above. Delete this line*/
-  /*background: url("../img/san-diego-city-skyline-image.jpg") no-repeat center center; */
   opacity: 0.7;
   border: solid;
   min-height: 200px;
@@ -726,7 +720,6 @@ div.photo {
     background-size: cover;
   }
   #ob-pier {
-    /*background: url("../img/ocean-beach-pier.jpg") no-repeat center center;*/
     background: url(<%=asset_path("ocean-beach-pier.jpg")%>);  /* no-repeat center center; */
     opacity: 0.7;
     border: solid;
@@ -970,24 +963,7 @@ div.photo {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  /*.portfolio-background-image .cover {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #212121;
-      -webkit-opacity: .4;
-      -moz-opacity: .4;
-      opacity: .2;
-      -ms-filter: "alpha(Opacity=70)";
-      filter: alpha(opacity=70);
-      z-index: 90;
-}*/
-/*.portfolio-background-image {*/
-  /*position: relative;*/
-  /*z-index: 100;
-}*/
+
  .portfolio-1 {
    background-color: rgba(255,255,255,0.85);
    background-size: cover;
@@ -1049,8 +1025,6 @@ div.photo {
   color: #fff;
   /* background-color: #0099CC; */ /* blue */
   background-color: #22A7F0; /* blue */
-
-  /*background-color: #18bc9c; /* green */*/
   display: inline-block;
   position: relative;
   top: -.6em;
@@ -1076,8 +1050,6 @@ div.photo {
   color: #fff;
   /* background-color: #0099CC; */ /* blue */
   background-color: #22A7F0; /* blue */
-
-  /*background-color: #18bc9c; /* green */*/
   display: inline-block;
   position: relative;
   top: -.6em;
@@ -1105,7 +1077,6 @@ div.photo {
   text-align: center;
   color: #fff;
   background-color: #0099CC; /* blue */
-  /*background-color: #18bc9c; /* green */*/
   display: inline-block;
   position: relative;
   top: -.6em;
@@ -1133,7 +1104,6 @@ div.photo {
   color: #fff;
   /* background-color: #0099CC; */ /* blue */
   background-color: #22A7F0; /* blue */
-  /*background-color: #18bc9c; /* green */*/
   display: inline-block;
   position: relative;
   top: -.6em;
@@ -1281,9 +1251,7 @@ button.btn {
 #footer a {
 	color: white;
 }
-/*.centered {
-  text-align: center;
-}*/
+
 /* -------------------------Test with image opacity -------------------- */
 .my-container {
     position: relative;
