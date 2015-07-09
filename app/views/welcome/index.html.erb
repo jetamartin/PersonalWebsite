@@ -107,7 +107,9 @@
 <div class="water-background-image">
 <div class="block-3-container section-container about-me-container div-separator water-image-mask">
   <h2 class="section-header-style">About Me</h2>
-  <hr class="web-section-separator">
+  <!-- <hr class="web-section-separator"> -->
+  <hr class="about-separator">
+
 <!-- <div class="block-3-container section-container about-me-container div-separator smooth-scroll" id="about"> -->
   <div class="container about-me-container-buffer" >
     <div class="row">
@@ -234,7 +236,7 @@
   <div class="container">
     <div class="row row-centered wow animate portfolio-elements bounceInDown">
       <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
-        <h2>Here is a sampling of my work:</h2>
+        <h2 class="section-subhead">Here is a sampling of my work:</h2>
         <!-- <h3>
           Below you will find some of my more recent projects. Hover/Click on each image to see a brief description
           of the portforlio item. Click on the "Read More" button to see a complete description.
@@ -256,7 +258,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -274,7 +276,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -290,7 +292,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -309,7 +311,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -325,7 +327,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -342,7 +344,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -360,7 +362,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -376,7 +378,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -392,7 +394,7 @@
             <p>
               This is the subtext that I want to include on this portfolio item
             </p>
-            <a href="#" class="info">Read More</a>
+            <a href="#" class="info">More</a>
           </div>
         </div>
       </div>
@@ -427,7 +429,7 @@
   <div class="container">
     <div class="row feature center-block left-align-text wow animate blog-elements slideInLeft ">
       <div class="col-sm-6 col-md-6 ">
-        <%=image_tag "Dots.jpg", class:"img-responsive"%>
+        <%=image_tag "Dots.jpg", class:"img-responsive img-thumbnail"%>
         <!-- ##Modified line above - delete this line -->
         <!-- <img src="../img/Dots.jpg" class="img-responsive"> -->
 
@@ -437,7 +439,7 @@
         <h3>subtitle</h3>
         <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-           specimen book.<a href="#" class="next">Read more <span>→</span></a>
+           specimen book.<a href="#" class="next">More <span>→</span></a>
          </h4>
          <!-- <a href="#" class="next">Read more <span>→</span></a> -->
       </div>
@@ -445,7 +447,7 @@
     <br>
     <div class="row feature left-align-text wow animate blog-elements slideInRight">
       <div class="col-sm-push-6 col-sm-6 col-md-push-6 col-md-6">
-        <%=image_tag "bitflow.jpg", class:"img-responsive" %>
+        <%=image_tag "bitflow.jpg", class:"img-responsive img-thumbnail" %>
 
       </div>
       <div class="col-sm-6 col-sm-pull-6 col-md-6">
@@ -453,14 +455,14 @@
         <h3>subtitle</h3>
         <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-           specimen book.<a href="#" class="next">Read more <span>→</span></a>
+           specimen book.<a href="#" class="next">More <span>→</span></a>
          </h4>
       </div>
     </div>
     <br>
     <div class="row feature center-block left-align-text wow animate blog-elements slideInLeft">
       <div class="col-sm-6 col-md-6">
-        <%=image_tag "Dots.jpg", class:"img-responsive"%>
+        <%=image_tag "Dots.jpg", class:"img-responsive img-thumbnail"%>
 
       </div>
       <div class="col-sm-6 col-md-6">
@@ -468,21 +470,21 @@
         <h3>subtitle</h3>
         <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
          dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-         specimen book.<a href="#" class="next">Read more <span>→</span></a>
+         specimen book.<a href="#" class="next">More <span>→</span></a>
         </h4>
      </div>
     </div>
     <br>
     <div class="row feature left-align-text wow animate blog-elements slideInRight">
       <div class="col-sm-push-6 col-sm-6 col-md-push-6 col-md-6">
-        <%=image_tag "DigitalDreamUtopia.jpg", class:"img-responsive"%>
+        <%=image_tag "DigitalDreamUtopia.jpg", class:"img-responsive img-thumbnail"%>
       </div>
       <div class="col-sm-6 col-sm-pull-6 col-md-6">
         <h1>Blog Article 4</h1>
         <h3>subtitle</h3>
         <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
          dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-         specimen book<a href="#" class="next">Read more <span>→</span></a>
+         specimen book<a href="#" class="next">More <span>→</span></a>
         </h4>
      </div>
     </div>
