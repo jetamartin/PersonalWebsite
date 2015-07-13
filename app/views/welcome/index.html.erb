@@ -418,79 +418,50 @@
 
 <!-- *******************************  BLOG SECTION *********************************** -->
 <div class= "container-fluid smooth-scroll" id="blog">
-<div class="water-background-image">
-<div class="div-separator water-image-mask">
-  <!-- Blog Header -->
-  <h2 class="section-header-style">Blog</h2>
-  <hr class="blog-separator">
-
-
-  <!-- Core Blog Content -->
-  <div class="container">
-    <div class="row feature center-block left-align-text wow animate blog-elements slideInLeft ">
-      <div class="col-sm-6 col-md-6 ">
-        <%=image_tag "Dots.jpg", class:"img-responsive img-thumbnail"%>
-        <!-- ##Modified line above - delete this line -->
-        <!-- <img src="../img/Dots.jpg" class="img-responsive"> -->
-
+  <div class="water-background-image">
+    <div class="div-separator water-image-mask">
+      <!-- Blog Header -->
+      <h2 class="section-header-style">Blog</h2>
+      <hr class="blog-separator">
+    <!-- Core Blog Content -->
+      <div class="container">
+        <% leftJustify = true %>
+        <% @blog_posts.each do |blogPost| %>
+          <% if leftJustify %>
+            <% leftJustify = false %>
+            <div class="row feature center-block left-align-text wow animate blog-elements slideInLeft ">
+              <div class="col-sm-6 col-md-6 ">
+                <%= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <h1><%= blogPost.title %></h1>
+                <h3><%= blogPost.subtitle %></h3>
+                <h4 class="truncateIt"> <%= blogPost.body %><a href="#" class="next">More <span>→</span></a>
+                </h4>
+                 <!-- <a href="#" class="next">Read more <span>→</span></a> -->
+              </div>
+            </div>
+            <br>
+          <% else %>
+            <% leftJustify = true %>
+            <div class="row feature left-align-text wow animate blog-elements slideInRight">
+              <div class="col-sm-push-6 col-sm-6 col-md-push-6 col-md-6">
+                <%= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
+              </div>
+              <div class="col-sm-6 col-sm-pull-6 col-md-6">
+                <h1><%= blogPost.title %></h1>
+                <h3><%= blogPost.subtitle %></h3>
+                <h4 class="truncateIt"> <%= blogPost.body %><a href="#" class="next">More <span>→</span></a>
+                </h4>
+                 <!-- <a href="#" class="next">Read more <span>→</span></a> -->
+              </div>
+            </div>
+            <br>
+          <% end %>
+        <% end %>
       </div>
-      <div class="col-sm-6 col-md-6">
-        <h1>Blog Article 1</h1>
-        <h3>subtitle</h3>
-        <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-           dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-           specimen book.<a href="#" class="next">More <span>→</span></a>
-         </h4>
-         <!-- <a href="#" class="next">Read more <span>→</span></a> -->
-      </div>
-    </div>
-    <br>
-    <div class="row feature left-align-text wow animate blog-elements slideInRight">
-      <div class="col-sm-push-6 col-sm-6 col-md-push-6 col-md-6">
-        <%=image_tag "bitflow.jpg", class:"img-responsive img-thumbnail" %>
-
-      </div>
-      <div class="col-sm-6 col-sm-pull-6 col-md-6">
-        <h1>Blog Article 2</h1>
-        <h3>subtitle</h3>
-        <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-           dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-           specimen book.<a href="#" class="next">More <span>→</span></a>
-         </h4>
-      </div>
-    </div>
-    <br>
-    <div class="row feature center-block left-align-text wow animate blog-elements slideInLeft">
-      <div class="col-sm-6 col-md-6">
-        <%=image_tag "Dots.jpg", class:"img-responsive img-thumbnail"%>
-
-      </div>
-      <div class="col-sm-6 col-md-6">
-        <h1>Blog Article 3</h1>
-        <h3>subtitle</h3>
-        <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-         specimen book.<a href="#" class="next">More <span>→</span></a>
-        </h4>
-     </div>
-    </div>
-    <br>
-    <div class="row feature left-align-text wow animate blog-elements slideInRight">
-      <div class="col-sm-push-6 col-sm-6 col-md-push-6 col-md-6">
-        <%=image_tag "DigitalDreamUtopia.jpg", class:"img-responsive img-thumbnail"%>
-      </div>
-      <div class="col-sm-6 col-sm-pull-6 col-md-6">
-        <h1>Blog Article 4</h1>
-        <h3>subtitle</h3>
-        <h4 class="truncateIt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-         specimen book<a href="#" class="next">More <span>→</span></a>
-        </h4>
-     </div>
-    </div>
-  </div>
-</div> <!-- /blog-image cover -->
-</div> <!-- Blog-background-image -->
+    </div> <!-- /blog-image cover -->
+  </div> <!-- Blog-background-image -->
 </div> <!-- Blog container-fluid -->
 
 

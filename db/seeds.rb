@@ -5,13 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
 BlogPost.create(
  date: '6/01/2015',
  title: 'Blog Article #1',
  subtitle: 'Subtitle #1',
  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae odio quis arcu fermentum suscipit a at tellus. Sed pellentesque blandit urna, in cursus metus luctus id. Sed ac consectetur nisl, eu suscipit metus. Nulla id pharetra tellus. Cras elementum est sit amet libero tempor, sed sollicitudin justo semper. Donec elementum malesuada felis et bibendum. Pellentesque consequat vitae nulla at auctor. Pellentesque gravida nunc eu felis efficitur, sed fringilla justo molestie. Phasellus dignissim vehicula lectus, non volutpat nulla sollicitudin et. Duis luctus elit dictum nibh posuere laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at lobortis dui, eu hendrerit justo. Pellentesque maximus ex in tortor finibus, auctor facilisis lectus sodales. Duis magna nunc, mattis ac condimentum eget, laoreet sit amet ante.",
  tags: "CSS HTML",
- image_path: "assets/Dots.jpg",
+ blog_pic: "Dots.jpg",
  article_link: "www.google.com",
  author: "Jet Martin")
 
@@ -20,7 +22,7 @@ BlogPost.create(date: '6/01/2015',
   subtitle: 'Subtitle #2',
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae odio quis arcu fermentum suscipit a at tellus. Sed pellentesque blandit urna, in cursus metus luctus id. Sed ac consectetur nisl, eu suscipit metus. Nulla id pharetra tellus. Cras elementum est sit amet libero tempor, sed sollicitudin justo semper. Donec elementum malesuada felis et bibendum. Pellentesque consequat vitae nulla at auctor. Pellentesque gravida nunc eu felis efficitur, sed fringilla justo molestie. Phasellus dignissim vehicula lectus, non volutpat nulla sollicitudin et. Duis luctus elit dictum nibh posuere laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at lobortis dui, eu hendrerit justo. Pellentesque maximus ex in tortor finibus, auctor facilisis lectus sodales. Duis magna nunc, mattis ac condimentum eget, laoreet sit amet ante.",
   tags: "CSS HTML",
-  image_path: "assets/bitflow.jpg",
+  blog_pic: "bitflow.jpg",
   article_link: "www.google.com",
   author: "Jet Martin")
 
@@ -29,7 +31,7 @@ BlogPost.create(date: '6/01/2015',
     subtitle: 'Subtitle #3',
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae odio quis arcu fermentum suscipit a at tellus. Sed pellentesque blandit urna, in cursus metus luctus id. Sed ac consectetur nisl, eu suscipit metus. Nulla id pharetra tellus. Cras elementum est sit amet libero tempor, sed sollicitudin justo semper. Donec elementum malesuada felis et bibendum. Pellentesque consequat vitae nulla at auctor. Pellentesque gravida nunc eu felis efficitur, sed fringilla justo molestie. Phasellus dignissim vehicula lectus, non volutpat nulla sollicitudin et. Duis luctus elit dictum nibh posuere laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at lobortis dui, eu hendrerit justo. Pellentesque maximus ex in tortor finibus, auctor facilisis lectus sodales. Duis magna nunc, mattis ac condimentum eget, laoreet sit amet ante.",
     tags: "CSS HTML",
-    image_path: "assets/bitflow.jpg",
+    blog_pic: "DigitalDreamUtopia",
     article_link: "www.google.com",
     author: "Jet Martin")
 
@@ -39,7 +41,7 @@ BlogPost.create(
  subtitle: 'Subtitle #4',
  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae odio quis arcu fermentum suscipit a at tellus. Sed pellentesque blandit urna, in cursus metus luctus id. Sed ac consectetur nisl, eu suscipit metus. Nulla id pharetra tellus. Cras elementum est sit amet libero tempor, sed sollicitudin justo semper. Donec elementum malesuada felis et bibendum. Pellentesque consequat vitae nulla at auctor. Pellentesque gravida nunc eu felis efficitur, sed fringilla justo molestie. Phasellus dignissim vehicula lectus, non volutpat nulla sollicitudin et. Duis luctus elit dictum nibh posuere laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at lobortis dui, eu hendrerit justo. Pellentesque maximus ex in tortor finibus, auctor facilisis lectus sodales. Duis magna nunc, mattis ac condimentum eget, laoreet sit amet ante.",
  tags: "CSS HTML",
- image_path: "assets/DigitalDreamUtopia",
+ blog_pic: "Dots.jpg",
  article_link: "www.google.com",
  author: "Jet Martin")
 
