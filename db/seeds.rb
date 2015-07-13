@@ -51,7 +51,7 @@ PortfolioItem.create(
   date: "8/01/2014",
   title: "Edge Communications",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/PhoneWebsite.jpg",
+  primary_image_path: "PhoneWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -61,7 +61,7 @@ PortfolioItem.create(
   date: "9/01/2014",
   title: "NASA Website",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/NasaWebsite.jpg",
+  primary_image_path: "NasaWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -71,7 +71,7 @@ PortfolioItem.create(
   date: "10/01/2014",
   title: "PRIME Communications",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/PrimeWebsite.jpg",
+  primary_image_path: "PrimeWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -81,7 +81,7 @@ PortfolioItem.create(
   date: "11/01/2014",
   title: "Stanford News",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/StandfordNews",
+  primary_image_path: "StandfordNews",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -91,7 +91,7 @@ PortfolioItem.create(
   date: "12/01/2014",
   title: "ICAHN Hospitals",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/HospitalWebsite.jpg",
+  primary_image_path: "HospitalWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -101,7 +101,7 @@ PortfolioItem.create(
   date: "01/01/2015",
   title: "DesignStyle Template",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/DesignStyleWebsite.jpg",
+  primary_image_path: "DesignStyleWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -111,7 +111,7 @@ PortfolioItem.create(
   date: "02/01/2015",
   title: "Ferrari Automobiles",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/FerrariWebsite.jpg",
+  primary_image_path: "FerrariWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -121,7 +121,7 @@ PortfolioItem.create(
   date: "03/01/2015",
   title: "Big River Telephone",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/BigRiverTelephoneWebsite.jpg",
+  primary_image_path: "BigRiverTelephoneWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
@@ -131,7 +131,7 @@ PortfolioItem.create(
   date: "04/01/2015",
   title: "Primo Restaurant",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "assets/RestaurantWebsite.jpg",
+  primary_image_path: "RestaurantWebsite.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"

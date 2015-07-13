@@ -245,161 +245,23 @@
     </div>
 
     <div class="row row-text-center wow animate portfolio-elements flipInX">
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-      <!-- <div class="main"> -->
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "PhoneWebsite.jpg", class:"img-responsive img-thumbnail center-block" %>
-          </a>
-          <!-- ## modified line below  -->
-          <!-- <a href="/posts/1"><img class="img-responsive img-thumbnail center-block" src="../img/PhoneWebsite.jpg" alt="Phone website project" /></a> -->
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
+      <% @portfolio_items.each do |portfolioItem| %>
+        <div class="post-box col-lg-4 col-md-4 col-sm-4">
+        <!-- <div class="main"> -->
+          <div class="view view-first">
+            <a href="/posts/1">
+              <%=image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail center-block") %>
+            </a>
+            <div class="mask">
+              <h2><%= portfolioItem.title %></h2>
+              <p>
+                <%= portfolioItem.subtitle %>
+              </p>
+              <a href="#" class="info">More</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-      <!-- <div class="main"> -->
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "NasaWebsite.jpg", class:"img-responsive img-thumbnail center-block" %>
-          </a>
-          <!-- Modified line below -->
-          <!-- <a href="/posts/1"><img class="img-responsive img-thumbnail center-block" src="../img/NasaWebsite.jpg" alt="Phone website project" /></a> -->
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-      <!-- <div class="main"> -->
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "PrimeWebsite.jpg", class:"img-responsive img-thumbnail center-block" %>
-          </a>
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-    </div> <!-- row -->
-
-
-    <div class="row row-centered wow animate portfolio-elements flipInX">
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-      <!-- <div class="main"> -->
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "StandfordNews.jpg", class:"img-responsive img-thumbnail center-block" %>
-          </a>
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "HospitalWebsite.jpg", class:"img-responsive img-thumbnail center-block"%>
-          </a>
-
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-      <!-- <div class="main"> -->
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "DesignStyleWebsite.jpg", class:"img-responsive img-thumbnail center-block"%>
-          </a>
-
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-    </div> <!-- /row -->
-
-    <div class="row row-centered wow animate portfolio-elements flipInX">
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "FerrariWebsite.jpg", class:"img-responsive img-thumbnail center-block" %>
-          </a>
-
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "BigRiverTelephoneWebsite.jpg", class:"img-responsive img-thumbnail center-block"%>
-          </a>
-
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="post-box col-lg-4 col-md-4 col-sm-4">
-        <div class="view view-first">
-          <a href="/posts/1">
-            <%=image_tag "RestaurantWebsite.jpg",class:"img-responsive img-thumbnail center-block"%>
-          </a>
-
-          <div class="mask">
-            <h2>Hover Style #1</h2>
-            <p>
-              This is the subtext that I want to include on this portfolio item
-            </p>
-            <a href="#" class="info">More</a>
-          </div>
-        </div>
-      </div>
-    </div> <!-- /row -->
-
+      <% end %>
   </div> <!-- Container for all portfolio content -->
 </div> <!-- portfolio image cover -->
 </div> <!-- portfolio background image  -->
