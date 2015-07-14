@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+if (BlogPost.count == 0) || (Portfolio.count == 0)
 
 BlogPost.create(
  date: '6/01/2015',
@@ -136,3 +137,5 @@ PortfolioItem.create(
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
 )
+
+end
