@@ -1,44 +1,178 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @blog_post.date %>
-</p>
+<div class= "container-fluid extend-full-width">
+  <div class="blog-background-image1 ">
+    <div class="div-separator blog-image-mask1 ">
+      <div class="container banner-page-size">
+        <h1 class="title-banner-text">
+          <%= @blog_post.title %>
+        </h1>
+        <h2 class="subtitle-banner-text">
+          <%= @blog_post.subtitle %>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog_post.title %>
-</p>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @blog_post.subtitle %>
-</p>
+<!-- <div class="container-fluid">
+  <div class="blog-image">
+    <div class="cover"> </div>
+    <div class="container banner-content">
+      <div class="row row-eq-height">
+        <div class="col-md-12">
+          <h1 style="color: white">
+            <%#= @blog_post.title %>
+          </h1>
+          <h2>
+            <%#= @blog_post.subtitle %>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container margin-around-content">
+  <div class="row">
+    <div class="col-md-8 separation-from-banner left-align-text">
+      <h4 class="services-text">
+        <%= @blog_post.author %>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        <%= @blog_post.date %>
+      </h4>
+      <br>
+      <h3>
+        <%= @blog_post.overview %>
+      </h3>
+      <br>
+      <h4 class="services-text">
+        <%= @blog_post.body %>
+      </h4>
+      <br>
+      <p>
+        <strong>Tags:</strong>
+        <%= @blog_post.tags %>
+      </p>
+      <br>
+      <p>
+        <strong>Article link:</strong>
+        <%= @blog_post.article_link %>
+      </p>
+      <h1 id="comments-title">1 Comment(s)</h1>
+      <div class="media comments-section">
+        <div class="commentor-photo">
+        </div>
+        <div class="media-body post_reply_comments">
+          <h3>Jason</h3>
+          <h4>JUNE 2, 2015 AT 9:15 PM</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          </p>
+          <a href="#">Reply</a>
+        </div>
+      </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @blog_post.body %>
-</p>
+      <div id="contact-page clearfix">
+          <div class="status alert alert-success" style="display: none"></div>
+          <div class="message_heading">
+              <h4>Leave a Reply</h4>
+              <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
+          </div>
 
-<p>
-  <strong>Tags:</strong>
-  <%= @blog_post.tags %>
-</p>
+          <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+              <div class="row">
+                  <div class="col-sm-5">
+                      <div class="form-group">
+                          <label>Name *</label>
+                          <input type="text" class="form-control" required="required">
+                      </div>
+                      <div class="form-group">
+                          <label>Email *</label>
+                          <input type="email" class="form-control" required="required">
+                      </div>
+                      <div class="form-group">
+                          <label>URL</label>
+                          <input type="url" class="form-control">
+                      </div>
+                  </div>
+                  <div class="col-sm-7">
+                      <div class="form-group">
+                          <label>Message *</label>
+                          <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+      <!--/#contact-page-->
+    </div>
 
-<p>
-  <strong>Image path:</strong>
-  <%= @blog_post.image_path %>
-</p>
 
-<p>
-  <strong>Article link:</strong>
-  <%= @blog_post.article_link %>
-</p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @blog_post.author %>
-</p>
 
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+    <div class="col-md-4">
+      <div>
+        <h3 class="left-align-text">Archive</h3>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="blog-misc-column">
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> Jul 2015 <span class="pull-right">(2)</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> Jun 2015 <span class="pull-right">(1)</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> May 2015 <span class="pull-right">(3)</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> Apr 2015 <span class="pull-right">(4)</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> Mar 2015 <span class="pull-right">(3)</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> Feb 2015 <span class="pull-right">(3)</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-double-right"></i> Jan 2015 <span class="pull-right">(5)</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="widget categories">
+        <h3 class="left-align-text">Categories</h3>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="blog_category blog-misc-column">
+                <li><a href="#">HTML <span class="badge">04</span></a></li>
+                <li><a href="#">CSS <span class="badge">10</span></a></li>
+                <li><a href="#">JQuery <span class="badge">06</span></a></li>
+                <li><a href="#">Design <span class="badge">25</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!--/.categories-->
+      <div class="widget tags">
+        <h3 class="left-align-text">Tag Cloud</h3>
+            <ul class="tag-cloud blog-misc-column">
+              <a class="btn btn-xs btn-primary" href="#">HTML</a>
+              <a class="btn btn-xs btn-primary" href="#">CSS</a>
+              <a class="btn btn-xs btn-primary" href="#">JQUERY</a>
+              <a class="btn btn-xs btn-primary" href="#">RAILS</a>
+              <a class="btn btn-xs btn-primary" href="#">RUBY</a>
+              <a class="btn btn-xs btn-primary" href="#">JAVASCRIPT</a>
+            </ul>
+      </div><!--/.tags-->
+
+    </div>
+  </div>
+</div> <!--  Container -->
+
+
+
+
 <%= link_to 'Back', blog_posts_path %>
+<script>
+// $(".portfolio-image" ).addClass( "water-background-image" );
+// $(".portfolio-image-mask" ).addClass( "water-image-mask" );
+$(".blog-background-image1" ).css( "background", "url(<%=asset_path("#{@blog_post.blog_pic}")%>) no-repeat center center");
+$(".blog-background-image1" ).css ("background-size", "cover" );
+
+$(".blog-image" ).css( "background", "url(<%=asset_path("#{@blog_post.blog_pic}")%>) no-repeat center center");
+$(".blog-image" ).css ("background-size", "cover" );
+
+
+</script>

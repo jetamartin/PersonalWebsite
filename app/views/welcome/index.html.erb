@@ -298,7 +298,9 @@
               <div class="col-sm-6 col-md-6">
                 <h1><%= blogPost.title %></h1>
                 <h3><%= blogPost.subtitle %></h3>
-                <h4 class="truncateIt"> <%= blogPost.body %><a href="#" class="next">More <span>→</span></a>
+                <h4 class="truncateIt">
+                  <%= blogPost.body %>
+                  <%= link_to "More →", blog_post_path(blogPost), class: "next" %>
                 </h4>
                  <!-- <a href="#" class="next">Read more <span>→</span></a> -->
               </div>
@@ -313,9 +315,10 @@
               <div class="col-sm-6 col-sm-pull-6 col-md-6">
                 <h1><%= blogPost.title %></h1>
                 <h3><%= blogPost.subtitle %></h3>
-                <h4 class="truncateIt"> <%= blogPost.body %><a href="#" class="next">More <span>→</span></a>
+                <h4 class="truncateIt">
+                  <%= blogPost.overview %>
+                  <%= link_to "More →", blog_post_path(blogPost), class: "next" %>
                 </h4>
-                 <!-- <a href="#" class="next">Read more <span>→</span></a> -->
               </div>
             </div>
             <br>
