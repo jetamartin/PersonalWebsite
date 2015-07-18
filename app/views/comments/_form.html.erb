@@ -1,0 +1,30 @@
+<!-- I changed comments to comment...not sure if that is correct..also changed blog_posts to blog_post -->
+<%= form_for(@blog_post.comment) do |f| %>
+  <% if @blog_post.comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog_post.comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @blog_post.comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

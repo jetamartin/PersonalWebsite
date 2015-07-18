@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# if (BlogPost.count == 0) || (Portfolio.count == 0)
+if (BlogPost.count == 0) || (Portfolio.count == 0)
 
 BlogPost.create(
  date: 'June 1, 2015',
@@ -144,4 +144,25 @@ PortfolioItem.create(
   project_type: "Advertisement"
 )
 
-# end
+Comment.create(
+  blog_post_id: 1,
+  name: "Bill Jones",
+  email: "billJones@yahoo.com",
+  message: "This is the first comment for blog post 1"
+)
+
+Comment.create(
+  blog_post_id: 1,
+  name: "Nancy Smith",
+  email: "nancySmith@yahoo.com",
+  message: "This is the second comment for blog post 1"
+)
+
+Comment.create(
+  blog_post_id: 2,
+  name: "Fred Johnson",
+  email: "fredJohnson@yahoo.com",
+  message: "This is the first comment for blog post 2"
+)
+
+end

@@ -59,21 +59,30 @@
         <strong>Article link:</strong>
         <%= @blog_post.article_link %>
       </p>
-      <h1 id="comments-title">1 Comment(s)</h1>
-      <div class="media comments-section">
-        <div class="commentor-photo">
-        </div>
-        <div class="media-body post_reply_comments">
-          <h3>Jason</h3>
-          <h4>JUNE 2, 2015 AT 9:15 PM</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          </p>
-          <a href="#">Reply</a>
-        </div>
-      </div>
+      <h1 id="comments-title"> <%= pluralize(@count,' Comment') %></h1>
+        <%= render @blog_post.comments %>
 
-      <div id="contact-page clearfix">
+        <h3>New comment</h3>
+
+        <%= form_for [@blog_post, @blog_post.comments.build], html: { class: "form-horizontal" } do |f| %>
+          <div class="form-group">
+            <%= f.label :name, class: "control-label col-sm-2 " %>
+            <div class="col-sm-10">
+              <%= f.text_field :name, class: "form-control", placeholder: "Enter your name here" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :message, class: " control-label col-sm-2" %>
+            <div class="col-sm-10">
+              <%= f.text_area :message, class: "form-control", placeholder: "Enter your message here" %>
+            </div>
+          </div>
+          <div class="form-group actions">
+            <%=f.submit %>
+          </div>
+        <% end %>
+
+      <!-- <div id="contact-page clearfix">
           <div class="status alert alert-success" style="display: none"></div>
           <div class="message_heading">
               <h4>Leave a Reply</h4>
@@ -107,7 +116,7 @@
                   </div>
               </div>
           </form>
-      </div>
+      </div> -->
       <!--/#contact-page-->
     </div>
 
@@ -148,12 +157,12 @@
       <div class="widget tags">
         <h3 class="left-align-text">Tag Cloud</h3>
             <ul class="tag-cloud blog-misc-column">
-              <a class="btn btn-xs btn-primary" href="#">HTML</a>
-              <a class="btn btn-xs btn-primary" href="#">CSS</a>
-              <a class="btn btn-xs btn-primary" href="#">JQUERY</a>
-              <a class="btn btn-xs btn-primary" href="#">RAILS</a>
-              <a class="btn btn-xs btn-primary" href="#">RUBY</a>
-              <a class="btn btn-xs btn-primary" href="#">JAVASCRIPT</a>
+              <li><a class="btn btn-xs btn-primary" href="#">HTML</a></li>
+              <li><a class="btn btn-xs btn-primary" href="#">CSS</a></li>
+              <li><a class="btn btn-xs btn-primary" href="#">JQUERY</a></li>
+              <li><a class="btn btn-xs btn-primary" href="#">RAILS</a></li>
+              <li><a class="btn btn-xs btn-primary" href="#">RUBY</a></li>
+              <li><a class="btn btn-xs btn-primary" href="#">JAVASCRIPT</a></li>
             </ul>
       </div><!--/.tags-->
 

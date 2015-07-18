@@ -1,0 +1,14 @@
+<div class="media comments-section">
+  <div class="commentor-photo">
+  </div>
+  <div class="media-body post_reply_comments">
+    <div class="comment-header">
+      <h3><%= comment.name %></h3>
+      <h4><%= time_ago_in_words(comment.created_at) %></h4>
+    </div>
+    <div class="comment-body">
+      <p><%=comment.message %></p>
+    </div>
+    <a href="#">Reply</a>
+  </div>
+</div>
