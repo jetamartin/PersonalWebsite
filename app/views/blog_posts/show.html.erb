@@ -60,10 +60,12 @@
         <%= @blog_post.article_link %>
       </p>
       <h1 id="comments-title"> <%= pluralize(@count,' Comment') %></h1>
-        <%= render @blog_post.comments %>
+      <%= render @blog_post.comments %>
+
 
         <h3>New comment</h3>
         <%= render 'comments/form' %>
+
 
         <!-- <%#= form_for [@blog_post, @blog_post.comments.build], html: { class: "form-horizontal" } do |f| %>
           <div class="form-group">
@@ -82,8 +84,6 @@
             <%#=f.submit %>
           </div>
         <%# end %> -->
-
-
     </div>
 
 

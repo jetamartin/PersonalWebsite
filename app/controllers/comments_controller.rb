@@ -4,7 +4,11 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    # line for closure_tree gem
+    @comments = Comment.hash_tree
+
+    # original line
+    # @comments = Comment.all
   end
 
   # GET /comments/1
@@ -14,7 +18,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @comment = Comment.new
+    @comment = Comment.new(parent_id: params[:parent_id])
+    @blog_post = @comment.parent.blog_post
   end
 
   # GET /comments/1/edit
@@ -24,9 +29,21 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+
+    # New stuff..may need to modify
+    if params[:comment][:parent_id].to_i > 0
+      parent = Comment.find_by_id(params[:comment].delete(:parent_id))
+      @comment = parent.children.build(comment_params)
+    else
+      @comment = Comment.new(comment_params)
+    end
+    # ..................end of new stuff ..............
+
+
+    # Original line of code below...
     @blog_post = BlogPost.find(params[:blog_post_id])
-    @count = @blog_post.comments.count
     if @blog_post.comments.create(comment_params)
+
       flash[:success] = 'Your comment was successfully added!'
       redirect_to @blog_post,
         notice: 'Comment was successfully created.'

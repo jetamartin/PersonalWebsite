@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :portfolio_items
   # only here means only the comment create action is mapped to a url
   resources :blog_posts do
-    resources :comments, only: :create
+    resources :comments, only: [:index, :create]
   end
+  get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
