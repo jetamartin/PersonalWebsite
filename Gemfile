@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 # Added these two gems for nested comments
-# gem 'closure_tree'
-# gem 'bootstrap-sass'
+gem 'closure_tree'
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

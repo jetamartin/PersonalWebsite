@@ -1,30 +1,18 @@
-<!-- I changed comments to comment...not sure if that is correct..also changed blog_posts to blog_post -->
-<%= form_for(@blog_post.comment) do |f| %>
-  <% if @blog_post.comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog_post.comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-      <% @blog_post.comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for [@blog_post, @blog_post.comments.build], html: { class: "form-horizontal" } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: "control-label col-sm-2 " %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, class: "form-control", placeholder: "Enter your name here" %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message, class: " control-label col-sm-2" %>
+    <div class="col-sm-10">
+      <%= f.text_area :message, class: "form-control", placeholder: "Enter your message here" %>
+    </div>
+  </div>
+  <div class="form-group actions">
+    <%=f.submit %>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_area :message %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
