@@ -1,4 +1,4 @@
-# We do not know how many levels of nesting our comments could have, but we want to render them all. To achieve this, we have to implement a recursion algorithm that will dig into the nested comments as long as they are present. 
+# We do not know how many levels of nesting our comments could have, but we want to render them all. To achieve this, we have to implement a recursion algorithm that will dig into the nested comments as long as they are present.
 module CommentsHelper
   def comments_tree_for(comments)
     comments.map do |comment, nested_comments|

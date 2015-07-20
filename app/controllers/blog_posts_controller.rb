@@ -10,8 +10,6 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
-    # Get the number of comments for this blog item
-    # @count = BlogPost.count('id' conditions: id)
     @count = Comment.where({blog_post_id: params[:id]}).count # Performs a COUNT(id)
   end
 

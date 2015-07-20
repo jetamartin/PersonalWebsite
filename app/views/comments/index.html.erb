@@ -1,33 +1,6 @@
 <p id="notice"><%= notice %></p>
 <!-- New line added for closure_tree GEM...hmm but I don't use this method-->
-<%= comments_tree_for @comments %>
+<!-- Changed the comment slightly from @comments to @blog_post.comments..now it is failing in comments_tree_for helper because nested_comments is nil in the helper. -->
+<%= comments_tree_for @blog_post.comments %>
 
-<h1>Listing Comments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.name %></td>
-        <td><%= comment.email %></td>
-        <td><%= comment.message %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Comment', new_comment_path %>
+<%= render comment %>

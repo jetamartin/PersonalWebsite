@@ -13,5 +13,5 @@
  *= require_tree .
  *= require_self
  */
-
+/* Added this line in support of nesting replies for closure_tree gem per http://www.sitepoint.com/nested-comments-rails/*/
  .replies {margin-left: 50px;}
