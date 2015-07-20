@@ -18,8 +18,14 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
+
+    parent = Comment.find(params[:parent_id])
     @comment = Comment.new(parent_id: params[:parent_id])
-    @blog_post = @comment.parent.blog_post
+    @blog_post = parent.root.blog_post
+
+    # My original 2 lines below
+    # @comment = Comment.new(parent_id: params[:parent_id])
+    # @blog_post = @comment.parent.blog_post
   end
 
   # GET /comments/1/edit
@@ -42,13 +48,15 @@ class CommentsController < ApplicationController
 
     # Original line of code below...
     @blog_post = BlogPost.find(params[:blog_post_id])
-    if @blog_post.comments.create(comment_params)
+    @comment.blog_post_id = params[:blog_post_id]
 
+    # Changed @blog_post.comments.create to .save in statement below.
+    if @comment.save
       flash[:success] = 'Your comment was successfully added!'
       redirect_to @blog_post,
         notice: 'Comment was successfully created.'
     else
-      redirect_to @blog_post,
+      redirect_to :back,
         alert: 'Error creating comment'
     end
   end
