@@ -11,6 +11,12 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1.json
   def show
     @count = Comment.where({blog_post_id: params[:id]}).count # Performs a COUNT(id)
+    # Adding "blog_post.comments.hash_tree" generates an error -undefined local variable or method blog_post
+    # Adding "Blog_post.comments.hash_tree" generates an error -unable to load Blog_post constant, expected blog_post.rb to define it.
+    # Adding "@blog_post.comments.hash_tree" generates error: undefined method `hash_tree' for #<Comment::ActiveRecord_Associations_CollectionProxy:0xadc18e8>
+    # @comments = Blog_post.comments.hash_tree
+    # Adding "Comment.hash_tree" generates error: undefined method `hash_tree' for #<Class:0x823a3d0>
+    #@comments = Comment.hash_tree
   end
 
   # GET /blog_posts/new

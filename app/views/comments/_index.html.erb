@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 <!-- New line added for closure_tree GEM...hmm but I don't use this method-->
 <!-- Changed the comment slightly from @comments to @blog_post.comments..now it is failing in comments_tree_for helper because nested_comments is nil in the helper. -->
+
 <%= comments_tree_for @blog_post.comments %>
+
 
 <%= render comment %>

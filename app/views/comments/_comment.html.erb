@@ -1,5 +1,3 @@
-<!-- Added this line because I'm not using index method...rather...caused app to crash so will delete it  -->
-<%#= comments_tree_for @comments %>
 <div class="media comments-section">
   <div class="commentor-photo">
   </div>
@@ -11,8 +9,10 @@
     <div class="comment-body">
       <p><%=comment.message %></p>
     </div>
-    <!-- <a href="#{<%#= link_to 'reply', new_comment_path(comment.id) %>}">Reply</a> -->
+    <!-- Need nil guard because this same form is also called from comments index view
+      where reply_form is not defined has no value... -->
     <% from_reply_form ||= nil %>
+    <!-- Want a Reply link on the comment unless you are displaying the comment your are already replying to -->
     <% unless from_reply_form %>
       <p><%= link_to 'reply', new_comment_path(comment.id) %></p>
     <% end %>

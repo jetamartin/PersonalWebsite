@@ -48,14 +48,17 @@ class CommentsController < ApplicationController
 
     # Original line of code below...
     @blog_post = BlogPost.find(params[:blog_post_id])
+
+
+    # Insert blog_post_id into new comment that I created above.
     @comment.blog_post_id = params[:blog_post_id]
 
-    # Changed @blog_post.comments.create to .save in statement below.
     if @comment.save
       flash[:success] = 'Your comment was successfully added!'
       redirect_to @blog_post,
         notice: 'Comment was successfully created.'
     else
+      flash[:error] = "Error creating comment"
       redirect_to :back,
         alert: 'Error creating comment'
     end
