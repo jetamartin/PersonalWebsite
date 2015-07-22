@@ -37,7 +37,7 @@ BlogPost.create(
     overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae odio quis arcu fermentum suscipit a at tellus. ",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae odio quis arcu fermentum suscipit a at tellus. Sed pellentesque blandit urna, in cursus metus luctus id. Sed ac consectetur nisl, eu suscipit metus. Nulla id pharetra tellus. Cras elementum est sit amet libero tempor, sed sollicitudin justo semper. Donec elementum malesuada felis et bibendum. Pellentesque consequat vitae nulla at auctor. Pellentesque gravida nunc eu felis efficitur, sed fringilla justo molestie. Phasellus dignissim vehicula lectus, non volutpat nulla sollicitudin et. Duis luctus elit dictum nibh posuere laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at lobortis dui, eu hendrerit justo. Pellentesque maximus ex in tortor finibus, auctor facilisis lectus sodales. Duis magna nunc, mattis ac condimentum eget, laoreet sit amet ante.",
     tags: "CSS HTML",
-    blog_pic: "DigitalDreamUtopia",
+    blog_pic: "DigitalDreamUtopia.jpg",
     article_link: "www.google.com",
     author: "Jet Martin")
 
@@ -88,7 +88,7 @@ PortfolioItem.create(
   date: 'November 1, 2014',
   title: "Stanford News",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "StandfordNews",
+  primary_image_path: "StandfordNews.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
   project_type: "Advertisement"
