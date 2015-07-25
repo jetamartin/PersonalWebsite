@@ -21,11 +21,12 @@ class CommentsController < ApplicationController
 
     parent = Comment.find(params[:parent_id])
     @comment = Comment.new(parent_id: params[:parent_id])
-    @blog_post = parent.root.blog_post
+    # Line below suggested by Ilya but it breaks adding in a new comment. Need to investigate why. Reverted back to original line #29 and now it works again.
+    # @blog_post = parent.root.blog_post
 
     # My original 2 lines below
     # @comment = Comment.new(parent_id: params[:parent_id])
-    # @blog_post = @comment.parent.blog_post
+    @blog_post = @comment.parent.blog_post
   end
 
   # GET /comments/1/edit

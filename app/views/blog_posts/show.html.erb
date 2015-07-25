@@ -62,15 +62,6 @@
       <h1 id="comments-title"> <%= pluralize(@count,' Comment') %></h1>
       <!-- original line  -->
       <%= render @blog_post.comments %>
-
-
-      <%#= redirect_to blog_post_comments_url(@blog_post.id)  %>
-      <!-- Experiment - remove this line  -->
-      <%#= render "comments/index" %>
-
-      <%#= render partial: 'comments/index', collection: @blog_post.comments %>
-
-
       <h3>New comment</h3>
       <%= render 'comments/form' %>
 
