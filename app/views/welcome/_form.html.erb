@@ -5,6 +5,7 @@
       <%= f.text_field :name, class: "form-control", placeholder: "Enter your name" %>
     </div>
   </div>
+  <br>
 
  <div class="form-group">
      <%= f.label :email, class: "col-sm-2 control-label" %>
@@ -12,14 +13,14 @@
        <%= f.text_field :email, class: "form-control", placeholder: "Enter your email address" %>
      </div>
  </div>
-
+ <br>
  <div class="form-group">
    <%= f.label :subject, class: "col-sm-2 control-label" %>
    <div class="col-sm-8">
      <%= f.text_field :subject, class: "form-control", placeholder: "Enter the subject of your message" %>
    </div>
  </div>
-
+ <br>
   <div class="form-group">
     <%= f.label :content, "Message", class: "col-sm-2 control-label" %>
     <div class="col-sm-8">
@@ -31,5 +32,6 @@
     <div class="col-sm-8 col-sm-offset-2">
       <%= f.submit "Send Message", class: "btn btn-primary" %>
     </div>
+    <br> <br> <br>
   </div>
 <% end %>
