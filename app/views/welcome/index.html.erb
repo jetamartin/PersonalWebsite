@@ -339,9 +339,20 @@
       <hr class="contact-separator">
     </div>
     <div class="container">
-      <div class="row contact-form">
-        <div class="col-sm-8 col-sm-offset-2 contact-form wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
-          <form role="form" action="assets/contact.php" method="post">
+      <div class="contact-form">
+        <!-- Let user know submission was received successfully  -->
+        <% if flash[:notice] %>
+          <div class="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <div class="wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp; -webkit-animation-name: fadeInUp;">
+          <%#= render partial: "new", locals: { new: @message} %>
+          <%= render "form" %>
+          <%#= render partial: "messages/new", locals: { new: @message } %>
+
+          <!-- Old form  -->
+          <!-- <form role="form" action="assets/contact.php" method="post">
             <div class="form-group" id="contact">
               <label class="sr-only" for="contact-email">Email</label>
                 <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
@@ -358,7 +369,7 @@
               </div>
               <br>
               <button type="submit" class="btn">Send it</button>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>

@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 # Here are the simple instructions for using "closure_tree"
 gem 'closure_tree'
 gem 'bootstrap-sass'
-gem 'acts_as_tree'
+# gem 'acts_as_tree'
+
+# Added per http://www.gotealeaf.com/blog/handling-emails-in-rails
+gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

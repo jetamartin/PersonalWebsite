@@ -22,5 +22,23 @@ module Jetamartin
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Added per http://stackoverflow.com/questions/10991932/sending-confirmation-emails-to-registered-users-in-ror-app-via-localhost/10994387
+    # config.action_mailer.perform_deliveries = true
+    # config.action_mailer.raise_delivery_errors = true
+    #
+    # config.action_mailer.smtp_settings = {
+    #   address: "smtp.gmail.com",
+    #   port: 587,
+    #   domain: "www.jetamartin.com",
+    #   user_name: "jetmartinwebdesigns@gmail.com",
+    #   password: "@whitfield!",
+    #   authentication: :plain,
+    #   enable_starttls_auto: true
+    # }
+
+config.action_mailer.default_url_options = {
+  host: "www.jetamartin.com"
+}
   end
 end

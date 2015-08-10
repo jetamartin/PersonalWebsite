@@ -7,6 +7,14 @@ Rails.application.routes.draw do
   resources :blog_posts do
     resources :comments, only: [:index, :create]
   end
+
+  # Added per http://matharvard.ca/posts/2014/jan/11/contact-form-in-rails-4/
+  # To have everything under, /contact. I added two lines in my config/routes.rb to accomplish that.
+  # get 'contact', to: 'messages#new', as: 'contact'
+  # post 'contact', to: 'messages#create'
+  get 'contact', to: 'welcome#new', as: 'contact'
+  post 'contact', to: 'welcome#create'
+
   get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
 
   # The priority is based upon order of creation: first created -> highest priority.
