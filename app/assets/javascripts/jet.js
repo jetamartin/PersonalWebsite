@@ -145,4 +145,63 @@ $(".nav a").on("click", function(){
           }
       }
   });
+	$(".cnbox").each(function () {
+		var nheight = $(this).find(".nbox").height();
+		$(this).find(".cbox").css("height", nheight + 50);
+	});
+	var caroufredsel = function () {
+	$('#caroufredsel-blog-posts-container').carouFredSel({
+		responsive: true,
+		scroll: 1,
+		circular: false,
+		infinite: false,
+		items: {
+			visible: {
+					min: 1,
+					max: 3
+				}
+		},
+		prev: '#blog-posts-prev',
+		next: '#blog-posts-next',
+		auto: {
+				play: false
+		}
+	});
+};
+
+
+	// Isotope Portfolio
+	var $container = $('.portfolio-container');
+	var $blogcontainer = $('.posts-wrap');
+	var $filter = $('.portfolio-filter');
+
+	$(window).load(function () {
+		caroufredsel();
+		// Initialize Isotope
+		$container.isotope({
+				itemSelector: '.portfolio-item-wrapper'
+		});
+		$blogcontainer.isotope({
+				itemSelector: '.article-wrap'
+		});
+		$('.portfolio-filter a').click(function () {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector });
+				return false;
+		});
+		$filter.find('a').click(function () {
+				$filter.find('a').parent().removeClass('active');
+				$(this).parent().addClass('active');
+		});
+	});
+
+	$(window).smartresize(function () {
+		$container.isotope('reLayout');
+		$blogcontainer.isotope('reLayout');
+	});
+
+	$(window).resize(function () {
+		caroufredsel();
+	});
+
 });

@@ -278,6 +278,83 @@
 </div>
 </div>
 
+
+<!-- ************************************************************************* -->
+<!-- New Trial Blog Post Section  -->
+<!-- ************************************************************************* -->
+
+<!-- /#caroufredsel-portfolio -->
+<div class="container">
+<!-- /#action-box -->
+<section id="blog-posts" class="section type3">
+  <div class="row cnbox">
+      <div class="col-md-4">
+          <div class="cbox">
+              <h3 class="cbox-title">Latest Blog Posts</h3>
+              <span class="cbox-counter"><%=@blog_posts.count%>+</span>
+          </div>
+      </div>
+      <div class="col-md-8">
+          <div class="nbox">
+              <p class="lead">Donec in velit vel ipsum auctor pulvinar. Vesti bulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod auctor pulvinar.</p>
+              <div class="controls">
+                  <span id="blog-posts-prev" class="prev"><i class="fa fa-angle-left"></i></span>
+                  <span id="blog-posts-next" class="next"><i class="fa fa-angle-right"></i></span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+    <div class="hide-overflow">
+        <div class="row">
+            <div id="caroufredsel-blog-posts-container">
+              <% @blog_posts.each do |blogPost| %>
+                <div class="col-xs-12 col-sm-6 col-md-4 post-wrapper">
+                    <article class="post type3">
+                        <div class="entry-thumb">
+                          <%= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
+                          <div class="image-overlay"></div>
+                        </div>
+                        <!-- /.entry-thumb -->
+                        <div class="entry-wrap">
+                            <div class="entry-meta">
+                                <span class="entry-date"><i class="fa fa-clock-o"></i> <%= blogPost.date%></span>
+                                <span class="entry-comment pull-right">
+                                  <i class="fa fa-comments"></i>
+                                  <%= link_to "#{blogPost.comments.count}", blog_post_path(blogPost.id) %>
+                                </span>
+                            </div>
+                            <header class="entry-header">
+                                <h5 class="entry-title">
+                                  <%= link_to "#{blogPost.title}", blog_post_path(blogPost.id) %>
+                                </h5>
+                            </header>
+                            <div class="entry-content truncateIt">
+                                <%= blogPost.body %>
+                                <%= link_to "More →", blog_post_path(blogPost), class: "next" %>
+                            </div>
+                            <!-- /.entry-content -->
+                        </div>
+                    </article>
+                </div>
+              <% end %>
+            </div>
+            <!-- /caroufredsel-blog-posts-container -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /hide-overflow -->
+      </div>
+      <!-- /container  -->
+<!-- /#blog-posts -->
+
+<!-- ************************************************************************* -->
+
+
+
+
 <!-- *******************************  BLOG SECTION *********************************** -->
 <div class= "container-fluid smooth-scroll" id="blog">
   <div class="water-background-image">

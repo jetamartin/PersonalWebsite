@@ -7,6 +7,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Added for carosel functionality per http://docs.dev7studios.com/jquery-plugins/caroufredsel -->
+  <!-- Changed to use tag helper as seen below -->
+  <%=javascript_include_tag "jquery.carouFredSel-6.2.1.js" %>
+
   <%=javascript_include_tag "jet.js" %>
   <!-- <script src="../app/assets/javascripts/jet.js"></script> -->
 
@@ -49,7 +54,7 @@
   <!-- <link rel="../app/assets/stylesheets/magnific-popup.min.css"> -->
 
   <!--************************************************************* -->
-
+  <%= stylesheet_link_tag "font-awesome.min.css" %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
