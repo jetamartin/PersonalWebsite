@@ -149,7 +149,28 @@ $(".nav a").on("click", function(){
 		var nheight = $(this).find(".nbox").height();
 		$(this).find(".cbox").css("height", nheight + 50);
 	});
+
+
 	var caroufredsel = function () {
+		$('#caroufredsel-portfolio-container').carouFredSel({
+			responsive: true,
+			scroll: 1,
+			circular: false,
+			infinite: false,
+			items: {
+					visible: {
+							min: 1,
+							max: 3
+					}
+			},
+			prev: '#portfolio-prev',
+			next: '#portfolio-next',
+			auto: {
+					play: false
+			}
+	});	
+
+
 	$('#caroufredsel-blog-posts-container').carouFredSel({
 		responsive: true,
 		scroll: 1,
