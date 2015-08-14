@@ -231,139 +231,74 @@
 <!-- ************************************************************************* -->
 <!-- Source HTML from Theme for Protfolio  -->
 <!-- ************************************************************************* -->
-  <div class="container">
+<div class="container-fluid smooth-scroll" id="projects">
+  <div class="portfolio-background-image">
+    <div class="smooth-scroll div-separator portfolio-1">
+      <h2 class="section-header-style" >Projects</h2>
+      <hr class="portfolio-separator">
 
+        <div class="container">
+          <section id="caroufredsel-portfolio" class="section type3">
+          <div class="row cnbox">
+              <div class="col-md-4">
+                  <div class="cbox">
+                      <h3 class="cbox-title">Recent Portfolio Items</h3>
+                      <span class="cbox-counter"><%= "#{@portfolio_items.count}+"%></span>
+                  </div>
+              </div>
+              <div class="col-md-8">
+                  <div class="nbox">
+                      <p class="lead">Below you will find some of my more recent projects. Hover/Click on each image to see a brief description
+                                    of the portforlio item. Click on the "More" button to see a complete description.</p>
+                      <div class="controls">
+                          <span id="portfolio-prev" class="prev black"><i class="fa fa-angle-left"></i></span> &nbsp &nbsp &nbsp
+                          <span id="portfolio-next" class="next black"><i class="fa fa-angle-right"></i></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="hide-overflow">
+              <div class="row">
+                  <div id="caroufredsel-portfolio-container">
+                    <% @portfolio_items.each do |portfolioItem| %> <!-- Add -->
+                      <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper">
+                          <div class="portfolio-item type2">
+                              <div class="portfolio-thumb view view-first">
+                                  <%=image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail center-block") %> <!-- Add -->
+                                  <div class="mask">
+                                    <h2><%= portfolioItem.title %></h2>
+                                    <p>
+                                      <%= portfolioItem.subtitle %>
+                                    </p>
+                                    <a href="#" class="info">More</a>
+                                  </div>
+                              </div>
+                              <div class="portfolio-details">
+                                  <div class="portfolio-meta">
+                                      <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 17 August, 2014</a></span>
+                                      <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 12</a></span>
+                                  </div>
+                                  <h5 class="portfolio-title"><a href="">Has labitur disputando at, enim.</a></h5>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- /.portfolio-item-wrapper -->
+                    <% end %>
+                  </div>
+                  <!-- /.caroufredsel-portfolio-container -->
+              </div>
+              <!-- /.row -->
+          </div>
+        </section>
+      <!-- /#caroufredsel-portfolio -->
+      </div>
 
-    <section id="caroufredsel-portfolio" class="section type3">
-    <div class="row cnbox">
-        <div class="col-md-4">
-            <div class="cbox">
-                <h3 class="cbox-title">Recent Portfolio Items</h3>
-                <span class="cbox-counter"><%= "#{@portfolio_items.count}+"%></span>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="nbox">
-                <p class="lead">Donec in velit vel ipsum auctor pulvinar. Vesti bulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod auctor pulvinar. Donec in velit vel ipsum auctor pulvinar.</p>
-                <div class="controls">
-                    <span id="portfolio-prev" class="prev black"><i class="fa fa-angle-left"></i></span>
-                    <span id="portfolio-next" class="next black"><i class="fa fa-angle-right"></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hide-overflow">
-        <div class="row">
-            <div id="caroufredsel-portfolio-container">
-              <% @portfolio_items.each do |portfolioItem| %> <!-- Add -->
-                <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper">
-                    <div class="portfolio-item type2">
-                        <div class="portfolio-thumb view view-first">
-                            <%=image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail center-block") %> <!-- Add -->
-
-                            <!-- <div class="image-overlay"></div>
-                            <a href="img/general/img1.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-plus"></i></a>
-                            <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a> -->
-
-                            <div class="mask">  <!-- Added, commented out above -->
-                              <h2><%= portfolioItem.title %></h2>
-                              <p>
-                                <%= portfolioItem.subtitle %>
-                              </p>
-                              <a href="#" class="info">More</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta">
-                                <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 17 August, 2014</a></span>
-                                <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 12</a></span>
-                            </div>
-                            <h5 class="portfolio-title"><a href="">Has labitur disputando at, enim.</a></h5>
-                        </div>
-                    </div>
-                </div>
-              <% end %>
-                <!-- /.portfolio-item-wrapper -->
-                <!-- <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper nature outside">
-                    <div class="portfolio-item type2">
-                        <div class="portfolio-thumb">
-                            <img src="img/general/img2.jpg" class="img-responsive" alt="2nd Portfolio Thumb">
-                            <div class="image-overlay"></div>
-                            <a href="img/general/img2.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-plus"></i></a>
-                            <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
-                        </div>
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta">
-                                <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 17 August, 2014</a></span>
-                                <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 12</a></span>
-                            </div>
-                            <h5 class="portfolio-title"><a href="">Eu decore iisque sit.</a></h5>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- /.portfolio-item-wrapper -->
-                <!-- <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper photography artwork">
-                    <div class="portfolio-item type2">
-                        <div class="portfolio-thumb">
-                            <img src="img/general/img3.jpg" class="img-responsive" alt="3rd Portfolio Thumb">
-                            <div class="image-overlay"></div>
-                            <a href="img/general/img3.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-plus"></i></a>
-                            <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
-                        </div>
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta">
-                                <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 17 August, 2014</a></span>
-                                <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 12</a></span>
-                            </div>
-                            <h5 class="portfolio-title"><a href="">Illum dolorum accommodare.</a></h5>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- /.portfolio-item-wrapper -->
-                <!-- <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper creative nature">
-                    <div class="portfolio-item type2">
-                        <div class="portfolio-thumb">
-                            <img src="img/general/img4.jpg" class="img-responsive" alt="4th Portfolio Thumb">
-                            <div class="image-overlay"></div>
-                            <a href="img/general/img4.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-plus"></i></a>
-                            <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
-                        </div>
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta">
-                                <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 17 August, 2014</a></span>
-                                <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 12</a></span>
-                            </div>
-                            <h5 class="portfolio-title"><a href="">Eu aeque nusquam mea, ne est.</a></h5>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- /.portfolio-item-wrapper -->
-                <!-- <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper nature">
-                    <div class="portfolio-item type2">
-                        <div class="portfolio-thumb">
-                            <img src="img/general/img5.jpg" class="img-responsive" alt="5th Portfolio Thumb">
-                            <div class="image-overlay"></div>
-                            <a href="img/general/img5.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-plus"></i></a>
-                            <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
-                        </div>
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta">
-                                <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 17 August, 2014</a></span>
-                                <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 12</a></span>
-                            </div>
-                            <h5 class="portfolio-title"><a href="">Mei no modo vitae mentitum.</a></h5>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- /.portfolio-item-wrapper -->
-            </div>
-            <!-- /.caroufredsel-portfolio-container -->
-        </div>
-        <!-- /.row -->
-    </div>
-</section>
-<!-- /#caroufredsel-portfolio -->
+    </div class="container-fluid smooth-scroll" id="projects">
+    <!-- /container-fluid -->
+  </div>
+  <!-- /portfolio-background-image -->
 </div>
+<!-- /smooth-scroll div-separator portfolio-1 -->
 
 <!-- ***************End Source HTML from Theme for Portfolio****************** -->
 
@@ -380,7 +315,7 @@
             <h2 class="section-subhead">Here is a sampling of my work:</h2>
             <!-- <h3>
               Below you will find some of my more recent projects. Hover/Click on each image to see a brief description
-              of the portforlio item. Click on the "Read More" button to see a complete description.
+              of the portforlio item. Click on the "More" button to see a complete description.
             </h3> -->
           </div>
         </div>
@@ -437,6 +372,7 @@
               <p class="lead">Donec in velit vel ipsum auctor pulvinar. Vesti bulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod auctor pulvinar.</p>
               <div class="controls">
                   <span id="blog-posts-prev" class="prev"><i class="fa fa-angle-left"></i></span>
+                  &nbsp &nbsp &nbsp
                   <span id="blog-posts-next" class="next"><i class="fa fa-angle-right"></i></span>
               </div>
           </div>
