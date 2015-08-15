@@ -12,6 +12,8 @@ Rails.application.config.assets.precompile += %w( jquery.magnific-popup.min.js )
 Rails.application.config.assets.precompile += %w( magnific-popup.css )
 Rails.application.config.assets.precompile += %w( jquery.carouFredSel-6.2.1.js )
 Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+Rails.application.config.assets.precompile += %w( prettyPhoto.css )
+Rails.application.config.assets.precompile += %w( jquery.prettyPhoto.js )
 
 # Added line below to try and get asset to display be retrieved from DB...didn't work so comment out
 Rails.application.config.assets.precompile += %w( *.png *.jpg *.jpeg )

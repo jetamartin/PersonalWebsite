@@ -28,6 +28,13 @@ function scroll_to(clicked_link, nav_height) {
 
 // Smooth scrolling script from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 $(document).ready(function() {
+// Pretty photo script
+$("a[data-rel^='prettyPhoto']").prettyPhoto({
+		theme: 'light_square',
+		social_tools: false,
+		hook: 'data-rel'
+});
+
 
 // ------------------------------------------------------------------------------------------
   // Code below attempted to dynamically change glyphicons used on web page separator
@@ -168,7 +175,7 @@ $(".nav a").on("click", function(){
 			auto: {
 					play: false
 			}
-	});	
+	});
 
 
 	$('#caroufredsel-blog-posts-container').carouFredSel({

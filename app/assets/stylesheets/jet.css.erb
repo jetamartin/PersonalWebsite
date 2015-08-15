@@ -2043,7 +2043,7 @@ section {
     filter: alpha(opacity=50);
 }
 
-.portfolio-item .portfolio-thumb .portfolio-zoom, .portfolio-item .portfolio-thumb .portfolio-link {
+.portfolio-item .portfolio-thumb .ima-zoom, .portfolio-item .portfolio-thumb .portfolio-link {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -2061,7 +2061,7 @@ section {
 
 }
 
-.portfolio-item .portfolio-thumb .portfolio-zoom:hover, .portfolio-item .portfolio-thumb .portfolio-link:hover {
+.portfolio-item .portfolio-thumb .ima-zoom:hover, .portfolio-item .portfolio-thumb .portfolio-link:hover {
     background-color: #59AB02;
     color: #fff !important;
 }
@@ -2073,14 +2073,14 @@ section {
     transition: all 0.2s ease;
 }
 
-.portfolio-item .portfolio-thumb .portfolio-zoom {
+.portfolio-item .portfolio-thumb .ima-zoom {
     left: 0;
     margin-left: -50px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
-.portfolio-item:hover .portfolio-thumb .portfolio-zoom {
+.portfolio-item:hover .portfolio-thumb .ima-zoom {
     display: block;
     left: 50%;
     margin-left: -55px;
@@ -2125,3 +2125,92 @@ section {
 .entry-thumb .post-img > img {
   object-fit: fill;
 }
+/* For pretty photo for post*/
+.entry-thumb .ima-zoom {
+  color: #3498db;
+}
+.entry-thumb .ima-zoom {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    display: none;
+    line-height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 0;
+    margin-bottom: -50px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    color: #59AB02;
+}
+
+.entry-thumb .ima-zoom:hover {
+    background-color: #59AB02;
+    color: #fff !important;
+}
+
+.entry-thumb:hover .ima-zoom {
+    display: block;
+    bottom: 50%;
+    margin-bottom: -25px;
+}
+
+.entry-thumb iframe {
+    width: 100%;
+}
+
+/* Replacement CSS for Blog stuff*/
+.post .entry-thumb .ima-zoom, .post .entry-thumb .post-link {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    display: none;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    /*color: #59AB02;*/
+    color: #22A7F0;
+
+}
+
+.post .entry-thumb .ima-zoom:hover, .post .entry-thumb .post-link:hover {
+    background-color: #59AB02;
+    color: #fff !important;
+}
+
+.post .entry-thumb .post-link {
+    right: 0;
+    margin-right: -50px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.post .entry-thumb .ima-zoom {
+    left: 0;
+    margin-left: -50px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.post:hover .entry-thumb .ima-zoom {
+    display: block;
+    left: 50%;
+    margin-left: -55px;
+}
+
+.post:hover .entry-thumb .post-link {
+    display: block;
+    right: 50%;
+    margin-right: -55px;
+}
+/* portfolio-item portfolio-thumb portfolio-zoom portfolio-link  */
