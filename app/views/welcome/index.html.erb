@@ -270,7 +270,9 @@
                                     <p>
                                       <%= portfolioItem.subtitle %>
                                     </p>
-                                    <a href="#" class="info">More</a>
+                                    <%= link_to "More", portfolio_item_path(portfolioItem), class: "info" %>
+                                    <!-- Replaced by line above -->
+                                    <!-- <a href="#" class="info">More</a> -->
                                   </div>
                               </div>
                               <div class="portfolio-details">
@@ -333,6 +335,7 @@
                   <p>
                     <%= portfolioItem.subtitle %>
                   </p>
+                  <%#= link_to "More", portfolio_item_path(portfolioItem), class: "info" %>
                   <a href="#" class="info">More</a>
                 </div>
               </div>

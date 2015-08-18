@@ -1722,9 +1722,7 @@ a:active {
   min-height: 100%;
   overflow: hidden;
 }*/
-.hide-overflow {
-    overflow: hidden;
-}
+
 .entry-thumb {
     position: relative;
     overflow: hidden;
@@ -1741,16 +1739,7 @@ section {
 section {
     display:block;
 }
-/* Controls
- * -------------------------- */
-.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
-    margin-top: -10px;
-}
 
-.carousel-control .glyphicon-chevron-right {
-    left: inherit;
-    right: 50%;
-}
 /*Controls
  * -------------------------- */
 .controls .prev, .controls .next {
@@ -1996,6 +1985,11 @@ section {
 }
 
 /*Portfolio css*/
+/*.port-item {
+  object-fit: fill;
+  float: right;
+}*/
+
 .portfolio-item-wrapper {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -2073,14 +2067,14 @@ section {
     transition: all 0.2s ease;
 }
 
-.portfolio-item .portfolio-thumb .ima-zoom {
+.portfolio-item .portfolio-thumb .portfolio-zoom .ima-zoom {
     left: 0;
     margin-left: -50px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
-.portfolio-item:hover .portfolio-thumb .ima-zoom {
+.portfolio-item:hover .portfolio-thumb .ima-zoom .portfolio-zoom {
     display: block;
     left: 50%;
     margin-left: -55px;
@@ -2119,6 +2113,69 @@ section {
 .portfolio-likes {
     float: right;
 }
+
+/* Portfolio Item
+ * -------------------------- */
+.project-details-list {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #ecf0f1;
+    overflow: hidden;
+}
+
+.project-details-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.project-details-list li:first-child {
+    padding-top: 0;
+}
+
+.project-details-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.project-details-list h6 {
+    width: 100px;
+    float: left;
+    font-weight: normal;
+    color: #7f8c8d;
+    margin: 0;
+    line-height: 1.428571429;
+}
+
+.project-details-list .project-terms {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-left: 100px;
+}
+
+.portfolio-navigation {
+    text-align: right;
+}
+
+.portfolio-navigation-list {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    border: 1px solid #ecf0f1;
+    border-width: 1px 0;
+    padding: 10px 0;
+}
+
+.portfolio-navigation-list li {
+    display: inline-block;
+}
+
+.portfolio-navigation-list li:first-child {
+    float: left;
+}
+
+
+/**/
 .controls {
   text-align: center;
 }
@@ -2214,3 +2271,39 @@ section {
     margin-right: -55px;
 }
 /* portfolio-item portfolio-thumb portfolio-zoom portfolio-link  */
+
+/* Controls
+ * -------------------------- */
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    margin-top: -10px;
+}
+
+.carousel-control .glyphicon-chevron-right {
+    left: inherit;
+    right: 50%;
+}
+/* Added following lines per StackOverflow
+http://stackoverflow.com/questions/20639825/bootstrap-3-carousel-not-working */
+/* Declare heights because of positioning of img element */
+ .carousel .item {
+    width: 100%;
+    height: 500px;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 600px;
+}
+
+/*****************************************************************/
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+}
+.hide-overflow {
+    overflow: hidden;
+
+}
