@@ -15,7 +15,7 @@ function scroll_to(clicked_link, nav_height) {
 
 // Smooth scrolling script from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 $(document).ready(function() {
-
+// $('.carousel').carousel()
 
 // Pretty photo script
 $("a[data-rel^='prettyPhoto']").prettyPhoto({
@@ -196,6 +196,7 @@ $(".nav a").on("click", function(){
 
 	$(window).load(function () {
 		// Bootstrap Carousel
+		// jQuery('.carousel').carousel();
 		// jQuery('#carousel-generic-example').carousel();
 
 		caroufredsel();
