@@ -1742,6 +1742,7 @@ section {
 
 /*Controls
  * -------------------------- */
+
 .controls .prev, .controls .next {
     width: 50px;
     height: 50px;
@@ -1786,7 +1787,61 @@ section {
     margin-left: 0;
 }
 
+/* Sub-page*/
+/* Subpage Title
+ * -------------------------- */
+.subpage-title {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 25px;
+    *font-family: 'Montserrat', sans-serif;
 
+}
+
+.subpage-title.type2 {
+    padding-bottom: 0;
+}
+
+.subpage-title.type3 {
+    margin-bottom: -35px;
+}
+
+.subpage-title h5 {
+    text-transform: uppercase;
+    position: relative;
+    margin: 0;
+    font-weight: 800;
+    color: #2c3e50;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 25px;
+    border-left: 10px solid #f0f3f4;
+    padding-left: 15px;
+    text-align: left;
+}
+
+#supplementary .subpage-title h5 {
+    color: #ffffff;
+    font-size: 14px;
+    border-left: 0;
+    padding-left: 0;
+}
+
+.sidebar .subpage-title h5 {
+    font-size: 15px;
+}
+
+.subpage-title .controls {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #FFF;
+    padding-left: 20px;
+    float: right;
+}
+
+
+/* Sub-page End*/
 /*
  * Count Box ( cbox ) & Navigation Box ( nbox )
  * --------------------------------------------------
@@ -2037,7 +2092,7 @@ section {
     filter: alpha(opacity=50);
 }
 
-.portfolio-item .portfolio-thumb .ima-zoom, .portfolio-item .portfolio-thumb .portfolio-link {
+.portfolio-item .portfolio-thumb .portfolio-zoom, .portfolio-item .portfolio-thumb .portfolio-link {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -2055,7 +2110,7 @@ section {
 
 }
 
-.portfolio-item .portfolio-thumb .ima-zoom:hover, .portfolio-item .portfolio-thumb .portfolio-link:hover {
+.portfolio-item .portfolio-thumb .portfolio-zoom:hover, .portfolio-item .portfolio-thumb .portfolio-link:hover {
     background-color: #59AB02;
     color: #fff !important;
 }
@@ -2067,14 +2122,14 @@ section {
     transition: all 0.2s ease;
 }
 
-.portfolio-item .portfolio-thumb .portfolio-zoom .ima-zoom {
+.portfolio-item .portfolio-thumb .portfolio-zoom {
     left: 0;
     margin-left: -50px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
-.portfolio-item:hover .portfolio-thumb .ima-zoom .portfolio-zoom {
+.portfolio-item:hover .portfolio-thumb .portfolio-zoom {
     display: block;
     left: 50%;
     margin-left: -55px;
@@ -2305,5 +2360,4 @@ http://stackoverflow.com/questions/20639825/bootstrap-3-carousel-not-working */
 }
 .hide-overflow {
     overflow: hidden;
-
 }

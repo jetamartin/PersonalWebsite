@@ -1,18 +1,5 @@
-// $(document).ready(function() {
-//   $("button#display").click(function() {
-//     if ($("#display").text()=='Reset') {
-//       $("p#demo").empty();
-//       $("#display").text('Click Here');
-//     } else {
-//       var person = prompt("Please enter your name");
-//       if (person != null) {
-//           document.getElementById("demo").innerHTML =
-//           "Hello " + person + "! Welcome to the world of HTML!";
-//       }
-//       $('#display').text('Reset');
-//     }
-//   });
-// });
+
+
 function scroll_to(clicked_link, nav_height) {
 	var element_class = clicked_link.attr('href').replace('#', '.');
 	var scroll_to = 0;
@@ -28,8 +15,8 @@ function scroll_to(clicked_link, nav_height) {
 
 // Smooth scrolling script from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 $(document).ready(function() {
-// Bootstrap Carousel
-$("#carousel").carousel();
+
+
 // Pretty photo script
 $("a[data-rel^='prettyPhoto']").prettyPhoto({
 		theme: 'light_square',
@@ -154,11 +141,13 @@ $(".nav a").on("click", function(){
           }
       }
   });
+
+
 	$(".cnbox").each(function () {
 		var nheight = $(this).find(".nbox").height();
 		$(this).find(".cbox").css("height", nheight + 50);
 	});
-
+});
 
 	var caroufredsel = function () {
 		$('#caroufredsel-portfolio-container').carouFredSel({
@@ -206,14 +195,19 @@ $(".nav a").on("click", function(){
 	var $filter = $('.portfolio-filter');
 
 	$(window).load(function () {
+		// Bootstrap Carousel
+		// jQuery('#carousel-generic-example').carousel();
+
 		caroufredsel();
 		// Initialize Isotope
 		$container.isotope({
 				itemSelector: '.portfolio-item-wrapper'
 		});
+
 		$blogcontainer.isotope({
 				itemSelector: '.article-wrap'
 		});
+
 		$('.portfolio-filter a').click(function () {
 				var selector = $(this).attr('data-filter');
 				$container.isotope({ filter: selector });
@@ -223,7 +217,7 @@ $(".nav a").on("click", function(){
 				$filter.find('a').parent().removeClass('active');
 				$(this).parent().addClass('active');
 		});
-	});
+
 
 	$(window).smartresize(function () {
 		$container.isotope('reLayout');
@@ -233,5 +227,4 @@ $(".nav a").on("click", function(){
 	$(window).resize(function () {
 		caroufredsel();
 	});
-
 });
