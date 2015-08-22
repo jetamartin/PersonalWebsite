@@ -1,35 +1,22 @@
 
 
-function scroll_to(clicked_link, nav_height) {
-	var element_class = clicked_link.attr('href').replace('#', '.');
-	var scroll_to = 0;
-	if(element_class != '.top-content') {
-		element_class += '-container';
-		scroll_to = $(element_class).offset().top - nav_height;
-	}
-	if($(window).scrollTop() != scroll_to) {
-		$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
-	}
-}
+// function scroll_to(clicked_link, nav_height) {
+// 	var element_class = clicked_link.attr('href').replace('#', '.');
+// 	var scroll_to = 0;
+// 	if(element_class != '.top-content') {
+// 		element_class += '-container';
+// 		scroll_to = $(element_class).offset().top - nav_height;
+// 	}
+// 	if($(window).scrollTop() != scroll_to) {
+// 		$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+// 	}
+// }
 
 
 // Smooth scrolling script from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 $(document).ready(function() {
-// }); // /document.ready()
 
-// Bootstrap Carousel -- Tried each of the following lines but neither of them helped
-// $('#carousel-generic-example').carousel()
-// $('.carousel').carousel()
-// $('#carousel-generic-example').carousel()});
-// {
-	// 'prev'
-	// 'next'
-	// pause: true,
-	// interval: false,
-	// keyboard: true
-// }
 
-// jQuery('#carousel-generic-example').carousel();
 
 // Pretty photo script
 $("a[data-rel^='prettyPhoto']").prettyPhoto({
@@ -126,11 +113,7 @@ $(".truncateIt").dotdotdot({
 	}
 });
 
-// Scroll location for buttons on banner page
-$('a.scroll-link').on('click', function(e) {
-  e.preventDefault();
-  scroll_to($(this), $('nav').outerHeight());
-});
+
 
 // WOW Reveals CSS animation as you scroll down a page.
 // Link and activate WOW.js
@@ -154,6 +137,24 @@ $('#pauseButton').click(function () {
 
 }); // /document.ready()
 
+function scroll_to(clicked_link, nav_height) {
+	var element_class = clicked_link.attr('href').replace('#', '.');
+	var scroll_to = 0;
+	if(element_class != '.top-content') {
+		element_class += '-container';
+		scroll_to = $(element_class).offset().top - nav_height;
+	}
+	if($(window).scrollTop() != scroll_to) {
+		$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+	}
+}
+
+// Scroll location for buttons on banner page
+$('a.scroll-link').on('click', function(e) {
+  e.preventDefault();
+  scroll_to($(this), $('nav').outerHeight());
+});
+
 // Smooth Scrolling for anchor links: http://www.billerickson.net/code/smooth-scrolling-anchor-links/
   $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -169,6 +170,8 @@ $('#pauseButton').click(function () {
           }
       }
   });
+
+// }); // /document.ready()
 
 
 	$(".cnbox").each(function () {
@@ -247,7 +250,7 @@ $(window).load(function () {
 				$filter.find('a').parent().removeClass('active');
 				$(this).parent().addClass('active');
 		});
-	});
+
 
 	$(window).smartresize(function () {
 		$container.isotope('reLayout');
@@ -257,3 +260,5 @@ $(window).load(function () {
 	$(window).resize(function () {
 		caroufredsel();
 	});
+
+});
