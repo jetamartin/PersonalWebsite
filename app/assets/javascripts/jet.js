@@ -15,7 +15,21 @@ function scroll_to(clicked_link, nav_height) {
 
 // Smooth scrolling script from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 $(document).ready(function() {
+// }); // /document.ready()
+
+// Bootstrap Carousel -- Tried each of the following lines but neither of them helped
+// $('#carousel-generic-example').carousel()
 // $('.carousel').carousel()
+// $('#carousel-generic-example').carousel()});
+// {
+	// 'prev'
+	// 'next'
+	// pause: true,
+	// interval: false,
+	// keyboard: true
+// }
+
+// jQuery('#carousel-generic-example').carousel();
 
 // Pretty photo script
 $("a[data-rel^='prettyPhoto']").prettyPhoto({
@@ -113,12 +127,12 @@ $(".truncateIt").dotdotdot({
 });
 
 // Scroll location for buttons on banner page
-
 $('a.scroll-link').on('click', function(e) {
   e.preventDefault();
   scroll_to($(this), $('nav').outerHeight());
 });
 
+// WOW Reveals CSS animation as you scroll down a page.
 // Link and activate WOW.js
 new WOW().init();
 
@@ -127,6 +141,9 @@ $(".nav a").on("click", function(){
    $(this).parent().addClass("active");
 });
 
+}); // /document.ready()
+
+// Smooth Scrolling for anchor links: http://www.billerickson.net/code/smooth-scrolling-anchor-links/
   $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
           || location.hostname == this.hostname) {
@@ -147,9 +164,10 @@ $(".nav a").on("click", function(){
 		var nheight = $(this).find(".nbox").height();
 		$(this).find(".cbox").css("height", nheight + 50);
 	});
-});
 
-	var caroufredsel = function () {
+
+
+var caroufredsel = function () {
 		$('#caroufredsel-portfolio-container').carouFredSel({
 			responsive: true,
 			scroll: 1,
@@ -189,13 +207,13 @@ $(".nav a").on("click", function(){
 };
 
 
-	// Isotope Portfolio
-	var $container = $('.portfolio-container');
-	var $blogcontainer = $('.posts-wrap');
-	var $filter = $('.portfolio-filter');
+// Isotope Portfolio
+var $container = $('.portfolio-container');
+var $blogcontainer = $('.posts-wrap');
+var $filter = $('.portfolio-filter');
 
-	$(window).load(function () {
-		// Bootstrap Carousel
+$(window).load(function () {
+		// Bootstrap Carousel -- Tried each of the following lines but neither of them helped
 		// jQuery('.carousel').carousel();
 		// jQuery('#carousel-generic-example').carousel();
 
@@ -218,7 +236,7 @@ $(".nav a").on("click", function(){
 				$filter.find('a').parent().removeClass('active');
 				$(this).parent().addClass('active');
 		});
-
+	});
 
 	$(window).smartresize(function () {
 		$container.isotope('reLayout');
@@ -228,4 +246,3 @@ $(".nav a").on("click", function(){
 	$(window).resize(function () {
 		caroufredsel();
 	});
-});
