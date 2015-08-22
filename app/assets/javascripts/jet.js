@@ -141,6 +141,17 @@ $(".nav a").on("click", function(){
    $(this).parent().addClass("active");
 });
 
+$('#carousel-generic-example').carousel({
+		interval:2000,
+		pause: "false"
+});
+$('#playButton').click(function () {
+		$('#carousel-generic-example').carousel('cycle');
+});
+$('#pauseButton').click(function () {
+		$('#carousel-generic-example').carousel('pause');
+});
+
 }); // /document.ready()
 
 // Smooth Scrolling for anchor links: http://www.billerickson.net/code/smooth-scrolling-anchor-links/
