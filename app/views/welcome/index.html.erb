@@ -5,7 +5,7 @@
     <!-- container-fluid pushes brand to far left and menu to far right -->
     <div class="container-fluid">
       <!-- <div class="navbar-header"> -->
-        <a href="/index.html#home" class="navbar-brand">
+        <a href="#home" class="navbar-brand smoothScroll">
           <%= image_tag "JMLogo3.png", class:"logo"%>
         </a>
 
@@ -19,28 +19,30 @@
           <ul class= "nav navbar-nav navbar-right">
           <!-- <ul class= "nav nav-pills pull-right"> -->
             <li class="active menu-items">
-              <a href="/index.html#home">
+              <a href="#home" class="smoothScroll">
                 <span class="glyphicon glyphicon-home"></span>
                 <span>&nbsp;&nbsp;HOME&nbsp;&nbsp;&nbsp;</span>
               </a>
             </li>
 
             <li class="menu-items">
-              <a href="/index.html#about">
+              <a href="#about" class="smoothScroll">
                 <span class="glyphicon glyphicon-info-sign"></span>
                 <span>&nbsp;&nbsp;ABOUT&nbsp;&nbsp;&nbsp;</span>
               </a>
             </li>
 
             <li class="menu-items">
-              <a href="/index.html#portfolio">
+              <!-- <a href="/index.html#portfolio"> -->
+              <a href="#portfolio" class="smoothScroll">
+
                 <span class="glyphicon glyphicon-briefcase"></span>
                 <span>&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;&nbsp;</span>
               </a>
             </li>
 
             <li class="menu-items">
-              <a href="/index.html#blog">
+              <a href="#blog" class="smoothScroll">
                 <span class="glyphicon glyphicon-book"></span>
                 <span>&nbsp;&nbsp;BLOG&nbsp;&nbsp;&nbsp;</span>
               </a>
@@ -61,7 +63,7 @@
               </li>
 
               <li class="menu-items">
-                <a href="/index.html#contact">
+                <a href="#contact" class="smoothScroll">
                   <span class="glyphicon glyphicon-envelope"></span>
                   <span>&nbsp;&nbsp;CONTACT</span>
                 </a>
@@ -103,14 +105,14 @@
 
 <!-- ***********************  ABOUT ME SECTION ****************************** -->
 
-<div class= "container-fluid smooth-scroll" id="about">
+<div class= "container-fluid " id="about">
 <div class="water-background-image">
 <div class="block-3-container section-container about-me-container div-separator water-image-mask">
   <h2 class="section-header-style">About Me</h2>
   <!-- <hr class="web-section-separator"> -->
   <hr class="about-separator">
 
-<!-- <div class="block-3-container section-container about-me-container div-separator smooth-scroll" id="about"> -->
+<!-- <div class="block-3-container section-container about-me-container div-separator " id="about"> -->
   <div class="container about-me-container-buffer" >
     <div class="row">
       <!-- <div class="col-sm-12 centered  block-3 section-description wow fadeIn"> -->
@@ -231,9 +233,9 @@
 <!-- ************************************************************************* -->
 <!-- Carosel Based Potfolio Section -->
 <!-- ************************************************************************* -->
-<div class="container-fluid smooth-scroll" id="portfolio">
+<div class="container-fluid" id="portfolio">
   <div class="portfolio-background-image">
-    <div class="smooth-scroll div-separator portfolio-1">
+    <div class="div-separator portfolio-1">
       <h2 class="section-header-style" >Portfolio</h2>
       <hr class="portfolio-separator">
 
@@ -296,44 +298,44 @@
       </div>
 
     </div>
-    <!-- /container-fluid smooth-scroll id=portfolio -->
+    <!-- /container-fluid id=portfolio -->
   </div>
   <!-- /portfolio-background-image -->
 </div>
-<!-- /smooth-scroll div-separator portfolio-1 -->
+<!-- / div-separator portfolio-1 -->
 
 <!-- ***************End Source HTML from Theme for Portfolio****************** -->
 
 
 <!--++++++++++++++++++++++++  PORTFOLIO SECTION ++++++++++++++++++++++++++  -->
-<div class="container-fluid smooth-scroll" id="portfolio">
+<!-- <div class="container-fluid" id="portfolio1">
   <div class="portfolio-background-image">
-    <div class="smooth-scroll div-separator portfolio-1">
+    <div class=" div-separator portfolio-1">
       <h2 class="section-header-style" >Portfolio</h2>
       <hr class="portfolio-separator">
       <div class="container">
         <div class="row row-centered wow animate portfolio-elements bounceInDown">
           <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
-            <h2 class="section-subhead">Here is a sampling of my work:</h2>
+            <h2 class="section-subhead">Here is a sampling of my work:</h2> -->
             <!-- <h3>
               Below you will find some of my more recent projects. Hover/Click on each image to see a brief description
               of the portfolio item. Click on the "More" button to see a complete description.
             </h3> -->
-          </div>
+          <!-- </div>
         </div>
 
         <div class="row row-text-center wow animate portfolio-elements flipInX">
           <% @portfolio_items.each do |portfolioItem| %>
-            <div class="post-box col-lg-4 col-md-4 col-sm-4">
+            <div class="post-box col-lg-4 col-md-4 col-sm-4"> -->
             <!-- <div class="main"> -->
-              <div class="view view-first">
-                <a href="/posts/1">
-                  <%=image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail center-block") %>
-                </a>
+              <!-- <div class="view view-first">
+                <a href="/posts/1"> -->
+                  <%#=image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail center-block") %>
+                <!-- </a>
                 <div class="mask">
-                  <h2><%= portfolioItem.title %></h2>
+                  <h2><%#= portfolioItem.title %></h2>
                   <p>
-                    <%= portfolioItem.subtitle %>
+                    <%#= portfolioItem.subtitle %>
                   </p>
                   <%#= link_to "More", portfolio_item_path(portfolioItem), class: "info" %>
                   <a href="#" class="info">More</a>
@@ -341,10 +343,14 @@
               </div>
             </div>
           <% end %>
-      </div> <!-- Container for all portfolio content -->
-    </div> <!-- portfolio image cover -->
-    </div> <!-- portfolio background image  -->
-  </div> <!-- container-fluid id#portfolio-->
+      </div>  -->
+      <!-- Container for all portfolio content -->
+    <!-- </div>  -->
+    <!-- portfolio image cover -->
+    <!-- </div>  -->
+    <!-- portfolio background image  -->
+  <!-- </div>  -->
+  <!-- container-fluid id#portfolio-->
 <!--++++++++++++++++++++  END  PORTFOLIO SECTION ++++++++++++++++++++++++++  -->
 <div class="wrapper">
 <!-- Standalone city-skyline scene -->
@@ -358,7 +364,7 @@
 <!-- ************************************************************************* -->
 <!-- New Carosel Blog Post Section  -->
 <!-- ************************************************************************* -->
-<div class= "container-fluid smooth-scroll" id="blog">
+<div class= "container-fluid " id="blog">
   <div class="water-background-image">
     <div class="div-separator water-image-mask">
       <!-- Blog Header -->
@@ -436,7 +442,7 @@
         <!-- /hide-overflow -->
       </div>
       <!-- /container  -->
-    </div> <!-- container-fluid smooth-scroll" id="blog" -->
+    </div> <!-- container-fluid " id="blog" -->
   </div> <!--water-background-image -->
 </div> <!-- div-separator water-image-mask -->
 
@@ -448,62 +454,65 @@
 
 
 <!-- *******************************  BLOG SECTION *********************************** -->
-<div class= "container-fluid smooth-scroll" id="blog">
+<!-- <div class= "container-fluid " id="blog1">
   <div class="water-background-image">
-    <div class="div-separator water-image-mask">
+    <div class="div-separator water-image-mask"> -->
       <!-- Blog Header -->
-      <h2 class="section-header-style">Blog</h2>
-      <hr class="blog-separator">
+      <!-- <h2 class="section-header-style">Blog</h2>
+      <hr class="blog-separator"> -->
     <!-- Core Blog Content -->
-      <div class="container">
+      <!-- <div class="container">
         <% leftJustify = true %>
         <% @blog_posts.each do |blogPost| %>
           <% if leftJustify %>
             <% leftJustify = false %>
             <div class="row feature center-block left-align-text wow animate blog-elements slideInLeft ">
-              <div class="col-sm-6 col-md-6 ">
-                <%= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
-              </div>
+              <div class="col-sm-6 col-md-6 "> -->
+                <%#= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
+              <!-- </div>
               <div class="col-sm-6 col-md-6">
                 <h1><%= blogPost.title %></h1>
                 <h3><%= blogPost.subtitle %></h3>
                 <h4 class="truncateIt">
-                  <%= blogPost.body %>
-                  <%= link_to "More →", blog_post_path(blogPost), class: "next" %>
-                </h4>
+                  <%#= blogPost.body %>
+                  <%#= link_to "More →", blog_post_path(blogPost), class: "next" %>
+                </h4> -->
                  <!-- <a href="#" class="next">Read more <span>→</span></a> -->
-              </div>
+              <!-- </div>
             </div>
             <br>
           <% else %>
             <% leftJustify = true %>
             <div class="row feature left-align-text wow animate blog-elements slideInRight">
               <div class="col-sm-push-6 col-sm-6 col-md-push-6 col-md-6">
-                <%= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
+                <%#= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
               </div>
               <div class="col-sm-6 col-sm-pull-6 col-md-6">
-                <h1><%= blogPost.title %></h1>
-                <h3><%= blogPost.subtitle %></h3>
+                <h1><%#= blogPost.title %></h1>
+                <h3><%#= blogPost.subtitle %></h3>
                 <h4 class="truncateIt">
-                  <%= blogPost.overview %>
-                  <%= link_to "More →", blog_post_path(blogPost), class: "next" %>
+                  <%#= blogPost.overview %>
+                  <%#= link_to "More →", blog_post_path(blogPost), class: "next" %>
                 </h4>
               </div>
             </div>
             <br>
           <% end %>
         <% end %>
-      </div>
-    </div> <!-- /blog-image cover -->
-  </div> <!-- Blog-background-image -->
-</div> <!-- Blog container-fluid -->
+      </div> -->
+    <!-- </div>  -->
+    <!-- /blog-image cover -->
+  <!-- </div>  -->
+  <!-- Blog-background-image -->
+<!-- </div>  -->
+<!-- Blog container-fluid -->
 
 
   <!-- <section > -->
       <!-- <div class="lav-background" id="sd-beach-scene"> -->
   <div id="sd-beach-scene" >
 
-    <div class="container-fluid contact-container div-separator smooth-scroll"  id="contact" >
+    <div class="container-fluid contact-container div-separator "  id="contact" >
       <h2 class="section-header-style">Contact Me</h2>
       <hr class="contact-separator">
     </div>

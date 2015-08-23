@@ -14,6 +14,7 @@ Rails.application.config.assets.precompile += %w( prettyPhoto.css )
 Rails.application.config.assets.precompile += %w( jquery.prettyPhoto.js )
 Rails.application.config.assets.precompile += %w( jet.css )
 Rails.application.config.assets.precompile += %w( jet.js )
+Rails.application.config.assets.precompile += %w( smoothscroll.js )
 
 # Added line below to try and get asset to display be retrieved from DB...didn't work so comment out
 Rails.application.config.assets.precompile += %w( *.png *.jpg *.jpeg )
