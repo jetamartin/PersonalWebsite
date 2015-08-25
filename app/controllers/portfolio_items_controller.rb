@@ -10,7 +10,7 @@ class PortfolioItemsController < ApplicationController
   # GET /portfolio_items/1
   # GET /portfolio_items/1.json
   def show
-
+    @portfolio_items = PortfolioItem.all
     @portfolio_images = PortfolioImage.where("portfolio_item_id = ?", params[:id])
     @portfolio_item_id = @portfolio_item.id
 
