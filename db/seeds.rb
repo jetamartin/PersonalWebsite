@@ -59,7 +59,9 @@ PortfolioItem.create(
   title: "OgilvyOne Worldwide",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "BigData1.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "http://adayinbigdata.com/",
   project_type: "Commercial"
 )
@@ -69,7 +71,9 @@ PortfolioItem.create(
   title: "Stanford University",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "Stanford.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "www.stanford.com",
   project_type: "Academic"
 )
@@ -79,7 +83,9 @@ PortfolioItem.create(
   title: "Johnson & Johnson",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "JNJ.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "http://www.jnj.com/",
   project_type: "Commercial"
 )
@@ -89,7 +95,9 @@ PortfolioItem.create(
   title: "Genentech",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "Genentech.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "http://www.gene.com/",
   project_type: "Commercial"
 )
@@ -99,7 +107,9 @@ PortfolioItem.create(
   title: "General Electronics",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "ge.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "www.ge.com",
   project_type: "Commercial"
 )
@@ -109,7 +119,9 @@ PortfolioItem.create(
   title: "uCast",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "uCast.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "http://www.optimo-it.com/products/uCast/#/top",
   project_type: "Comercial"
 )
@@ -119,7 +131,9 @@ PortfolioItem.create(
   title: "Custom Toronto",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "customtoronto.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "http://www.customtoronto.ca/",
   project_type: "Comercial"
 )
@@ -129,7 +143,9 @@ PortfolioItem.create(
   title: "Maryland Security",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "MarylandSecurity.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "http://marylandsecurity.net/",
   project_type: "Commercial"
 )
@@ -139,7 +155,9 @@ PortfolioItem.create(
   title: "Blue Pixel",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "BluePixel.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "www.portfolioItems.com",
   project_type: "Commercial"
 )
@@ -149,7 +167,9 @@ PortfolioItem.create(
   title: "Puma",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "Puma.jpg",
-  body: "The body of text will go here",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "www.puma.com",
   project_type: "Commercial"
 )
