@@ -41,28 +41,40 @@
                     </ol>
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
+                      <!-- Display primary image from PortfolioItem table -->
+                      <% unless @portfolio_item.primary_image_path.nil? %>
                         <div class="item active">
-                          <%= image_tag("BigData1.jpg", class:"img-responsive portfolio-img", alt:"Carousel Image")%>
-                            <!-- <img src="img/portfolio/img1.jpg" class="img-responsive" alt="Carousel Image"> -->
-                            <div class="carousel-caption"
-                              <h3>Test Caption</h3>
-                              <p>This is just a test caption</p>
-                            </div>
+                          <%=image_tag("#{@portfolio_item.primary_image_path}", class:"img-responsive portfolio-img", alt:"Carousel Image") %>
+                        <!-- <%#= image_tag("BigData1.jpg", class:"img-responsive portfolio-img", alt:"Carousel Image")%> -->
+                        <% unless @portfolio_item.title.nil? %>
+                          <div class="carousel-caption">
+                            <h3><%=@portfolio_item.title%></h3>
+                            <% unless @portfolio_item.subtitle.nil? %>
+                            <p><%=@portfolio_item.subtitle%></p>
+                            <% end %> <!-- /subtitle.nil? -->
+                          </div>
+                        <% end %> <!-- /title.nil? -->
                         </div>
+                      <% end %> <!-- /unless -->
+
+                      <!-- Display any secondary image from PortfolioImages table -->
+                      <% @portfolio_images.each do |secondaryPortfolioImage| %>
+                        <% if secondaryPortfolioImage.portfolio_item_id == @portfolio_item_id %>
                         <div class="item">
-                          <%= image_tag("BigData2.jpg", class:"img-responsive portfolio-img", alt:"Carousel Image")%>
-                            <!-- <img src="img/portfolio/img2.jpg" class="img-responsive" alt="Carousel Image"> -->
+                        <%=image_tag("#{secondaryPortfolioImage.image_path}", class:"img-responsive portfolio-img", alt:"Carousel Image") %>
+                        <% unless secondaryPortfolioImage.title.nil? %>
+                          <div class="carousel-caption">
+                            <h3><%=secondaryPortfolioImage.title%></h3>
+                            <% unless secondaryPortfolioImage.subtitle.nil? %>
+                            <p><%=secondaryPortfolioImage.subtitle%></p>
+                            <% end %> <!-- /caption-text.nil? -->
+                          </div>
+                        <% end %> <!-- /caption_title.nil? -->
                         </div>
-                        <div class="item">
-                          <%= image_tag("BigData3.jpg", class:"img-responsive portfolio-img", alt:"Carousel Image")%>
-                            <!-- <img src="img/portfolio/img3.jpg" class="img-responsive" alt="Carousel Image"> -->
-                        </div>
-                        <div class="item">
-                          <%= image_tag("BigData4.jpg", class:"img-responsive portfolio-img", alt:"Carousel Image")%>
-                            <!-- <img src="img/portfolio/img3.jpg" class="img-responsive" alt="Carousel Image"> -->
-                        </div>
-                    </div>
-                    <!-- Controls -->
+                        <% end %> <!-- /if portfolio_item_id == @portfolio_item_id -->
+                      <% end %> <!-- /@portfolio_images.each iteration -->
+                    </div> <!-- /carousel-inner -->
+                    <!-- Left and right controls -->
                     <a class="left carousel-control" href="#carousel-generic-example" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                         <span class="sr-only">Previous</span>
@@ -71,15 +83,15 @@
                         <span class="glyphicon glyphicon-chevron-right"></span>
                         <span class="sr-only">Next</span>
                       </a>
-                      <div id="carouselButtons">
-                        <button id="playButton" type="button" class="btn btn-default btn-xs">
-                            <span class="glyphicon glyphicon-play"></span>
-                         </button>
-                        <button id="pauseButton" type="button" class="btn btn-default btn-xs">
-                            <span class="glyphicon glyphicon-pause"></span>
-                        </button>
-</div>
-                </div>
+                    <div id="carouselButtons">
+                      <button id="playButton" type="button" class="btn btn-default btn-xs">
+                          <span class="glyphicon glyphicon-play"></span>
+                       </button>
+                      <button id="pauseButton" type="button" class="btn btn-default btn-xs">
+                          <span class="glyphicon glyphicon-pause"></span>
+                      </button>
+                    </div>
+                </div> <!-- carousel -->
             </section>
             <!-- /.portfolio-thumb -->
             <div class="row left-align-text">
@@ -172,10 +184,10 @@
                                 <div class="portfolio-item type2">
                                     <div class="portfolio-thumb">
                                         <!-- <img src="images/BigRiverTelephoneWebsite.jpg" class="img-responsive" alt="2nd Portfolio Thumb"> -->
-                                        <%= image_tag("JohnsonJohnson.jpg", class:"img-responsive", alt:"2nd Portfolio Thumb")%>
+                                        <%= image_tag("JNJ.jpg", class:"img-responsive", alt:"2nd Portfolio Thumb")%>
 
                                         <div class="image-overlay"></div>
-                                        <a href="images/JohnsonJohnson.jpg" data-rel="prettyPhoto" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                        <a href="images/JNJ.jpg" data-rel="prettyPhoto" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
                                         <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
                                     </div>
                                     <div class="portfolio-details">

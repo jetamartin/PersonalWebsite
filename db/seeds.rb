@@ -56,94 +56,278 @@ BlogPost.create(
 
 PortfolioItem.create(
   date: 'August 1, 2014',
-  title: "Edge Communications",
+  title: "OgilvyOne Worldwide",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "PhoneWebsite.jpg",
+  primary_image_path: "BigData1.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "http://adayinbigdata.com/",
+  project_type: "Commercial"
 )
 
 PortfolioItem.create(
   date: 'September 1, 2014',
-  title: "NASA Website",
+  title: "Stanford University",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "NasaWebsite.jpg",
+  primary_image_path: "Stanford.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "www.stanford.com",
+  project_type: "Academic"
 )
 
 PortfolioItem.create(
   date: 'October 1, 2014',
-  title: "PRIME Communications",
+  title: "Johnson & Johnson",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "PrimeWebsite.jpg",
+  primary_image_path: "JNJ.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "http://www.jnj.com/",
+  project_type: "Commercial"
 )
 
 PortfolioItem.create(
   date: 'November 1, 2014',
-  title: "Stanford News",
+  title: "Genentech",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "StandfordNews.jpg",
+  primary_image_path: "Genentech.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "http://www.gene.com/",
+  project_type: "Commercial"
 )
 
 PortfolioItem.create(
   date: 'December 1, 2014',
-  title: "ICAHN Hospitals",
+  title: "General Electronics",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "HospitalWebsite.jpg",
+  primary_image_path: "ge.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "www.ge.com",
+  project_type: "Commercial"
 )
 
 PortfolioItem.create(
   date: 'January 1, 2015',
-  title: "DesignStyle Template",
+  title: "uCast",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "DesignStyleWebsite.jpg",
+  primary_image_path: "uCast.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "http://www.optimo-it.com/products/uCast/#/top",
+  project_type: "Comercial"
 )
 
 PortfolioItem.create(
   date: 'February 1, 2015',
-  title: "Ferrari Automobiles",
+  title: "Custom Toronto",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "FerrariWebsite.jpg",
+  primary_image_path: "customtoronto.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "http://www.customtoronto.ca/",
+  project_type: "Comercial"
 )
 
 PortfolioItem.create(
   date: 'March 1, 2015',
-  title: "Big River Telephone",
+  title: "Maryland Security",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "BigRiverTelephoneWebsite.jpg",
+  primary_image_path: "MarylandSecurity.jpg",
   body: "The body of text will go here",
-  website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  website_link: "http://marylandsecurity.net/",
+  project_type: "Commercial"
 )
 
 PortfolioItem.create(
   date: 'April 1, 2015',
-  title: "Primo Restaurant",
+  title: "Blue Pixel",
   subtitle: "This is the subtitle for this website",
-  primary_image_path: "RestaurantWebsite.jpg",
+  primary_image_path: "BluePixel.jpg",
   body: "The body of text will go here",
   website_link: "www.portfolioItems.com",
-  project_type: "Advertisement"
+  project_type: "Commercial"
 )
 
+PortfolioItem.create(
+  date: 'May 1, 2015',
+  title: "Puma",
+  subtitle: "This is the subtitle for this website",
+  primary_image_path: "Puma.jpg",
+  body: "The body of text will go here",
+  website_link: "www.puma.com",
+  project_type: "Commercial"
+)
+
+PortfolioImage.create(
+  portfolio_item_id: 1,
+  image_path: "BigData2.jpg",
+  title: "Big Data",
+  subtitle: "2nd Big Data slide"
+)
+PortfolioImage.create(
+  portfolio_item_id: 1,
+  image_path: "BigData3.jpg",
+  title: "Big Data",
+  subtitle: "3rd Big Data slide"
+)
+PortfolioImage.create(
+  portfolio_item_id: 1,
+  image_path: "BigData4.jpg",
+  title: "Big Data",
+  subtitle: "4th Big Data slide"
+)
+PortfolioImage.create(
+  portfolio_item_id: 2,
+  image_path: "StanfordAbout.jpg",
+  title: "About",
+  subtitle: "All about Stanford U"
+)
+PortfolioImage.create(
+  portfolio_item_id: 2,
+  image_path: "StanfordAdmission.jpg",
+  title: "Admission",
+  subtitle: "How to get in"
+)
+PortfolioImage.create(
+  portfolio_item_id: 2,
+  image_path: "StanfordAcademics.jpg",
+  title: "Academics",
+  subtitle: "Better have a 4.0+ GPA"
+)
+PortfolioImage.create(
+  portfolio_item_id: 2,
+  image_path: "StanfordResearch.jpg",
+  title: "Research",
+  subtitle: "Tons of research done here"
+)
+PortfolioImage.create(
+  portfolio_item_id: 2,
+  image_path: "StanfordCampusLife.jpg",
+  title: "Campus Life",
+  subtitle: "Study hard party harder"
+)
+PortfolioImage.create(
+  portfolio_item_id: 3,
+  image_path: "JNJProducts.jpg",
+  title: "JNJ Products",
+  subtitle: "JNJ's Healthcare Products"
+)
+PortfolioImage.create(
+  portfolio_item_id: 3,
+  image_path: "JNJOurCaring.jpg",
+  title: "JNJ Caring",
+  subtitle: "JNJ Cares Web section"
+)
+PortfolioImage.create(
+  portfolio_item_id: 3,
+  image_path: "JNJAbout.jpg",
+  title: "JNJ About",
+  subtitle: "All about the company"
+)
+PortfolioImage.create(
+  portfolio_item_id: 4,
+  image_path: "Genentech4Scientists.jpg",
+  title: "Scientist",
+  subtitle: "Genentech for Scientists"
+)
+PortfolioImage.create(
+  portfolio_item_id: 4,
+  image_path: "Genentech4MedicalProfessionals.jpg",
+  title: "Medical Professionals",
+  subtitle: "Genentech for Medical Professionals"
+)
+PortfolioImage.create(
+  portfolio_item_id: 4,
+  image_path: "Genentech4Patients.jpg",
+  title: "Patients",
+  subtitle: "Genentech for Patients"
+)
+PortfolioImage.create(
+  portfolio_item_id: 4,
+  image_path: "GenentechAbout.jpg",
+  title: "About",
+  subtitle: "All about Genentech"
+)
+PortfolioImage.create(
+  portfolio_item_id: 5,
+  image_path: "geB2B.jpg",
+  title: "B2B",
+  subtitle: "Business to Business"
+)
+PortfolioImage.create(
+  portfolio_item_id: 5,
+  image_path: "geB2C.jpg",
+  title: "B2C",
+  subtitle: "Business to Consumer"
+)
+PortfolioImage.create(
+  portfolio_item_id: 5,
+  image_path: "geAbout.jpg",
+  title: "About",
+  subtitle: "All about General Electrics"
+)
+PortfolioImage.create(
+  portfolio_item_id: 6,
+  image_path: "uCastFeatures.jpg",
+  title: "Features",
+  subtitle: "Key features of uCast"
+)
+PortfolioImage.create(
+  portfolio_item_id: 6,
+  image_path: "uCastHow.jpg",
+  title: "How",
+  subtitle: "How it works"
+)
+PortfolioImage.create(
+  portfolio_item_id: 7,
+  image_path: "customtorontoHow.jpg",
+  title: "How",
+  subtitle: "How it works"
+)
+PortfolioImage.create(
+  portfolio_item_id: 7,
+  image_path: "customtorontoArtwork.jpg",
+  title: "Artwork",
+  subtitle: "What artwork is available"
+)
+PortfolioImage.create(
+  portfolio_item_id: 8,
+  image_path: "MarylandSecurityServices.jpg",
+  title: "Services",
+  subtitle: "View the services offered"
+)
+PortfolioImage.create(
+  portfolio_item_id: 8,
+  image_path: "MarylandSecurityWhy.jpg",
+  title: "Why us",
+  subtitle: "See why you should use their services"
+)
+PortfolioImage.create(
+  portfolio_item_id: 9,
+  image_path: "BluePixelExperiences.jpg",
+  title: "Experiences",
+  subtitle: "From twinkies to Superbowls"
+)
+PortfolioImage.create(
+  portfolio_item_id: 9,
+  image_path: "BluePixelPlatform.jpg",
+  title: "Platform",
+  subtitle: "Great Interactive Platform"
+)
+PortfolioImage.create(
+  portfolio_item_id: 10,
+  image_path: "PumaMen.jpg",
+  title: "Men",
+  subtitle: "Puma Men's wear"
+)
+PortfolioImage.create(
+  portfolio_item_id: 10,
+  image_path: "PumaWomen.jpg",
+  title: "Women",
+  subtitle: "Puma Women's wear"
+)
+PortfolioImage.create(
+  portfolio_item_id: 10,
+  image_path: "PumaKids.jpg",
+  title: "Kids",
+  subtitle: "Puma Kid's wear"
+)
 Comment.create(
   blog_post_id: 1,
   name: "Bill Jones",
