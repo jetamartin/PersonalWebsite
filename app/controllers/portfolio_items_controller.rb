@@ -1,5 +1,6 @@
 class PortfolioItemsController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
+  helper_method :getNext, :getPrev
 
   # GET /portfolio_items
   # GET /portfolio_items.json
@@ -11,6 +12,14 @@ class PortfolioItemsController < ApplicationController
   # GET /portfolio_items/1.json
   def show
     @portfolio_items = PortfolioItem.all
+    @listOfPortfolioIds = Array.new
+    @portfolio_items.each do |portfolioId|
+      @listOfPortfolioIds.push(portfolioId.id)
+    end
+
+    puts "@listOfPortfolioIds.inspect"
+    logger.info "The listOfPortfolioIds is #{@listOfPortforlioIds}"
+
     @portfolio_images = PortfolioImage.where("portfolio_item_id = ?", params[:id])
     @portfolio_item_id = @portfolio_item.id
 
@@ -62,6 +71,24 @@ class PortfolioItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to portfolio_items_url, notice: 'Portfolio item was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def getPrev(currentPosition, arrayOfPositions)
+    index = arrayOfPositions.index(currentPosition)
+    unless index == 0
+      getPrev = arrayOfPositions.fetch(index - 1).to_i
+    else
+      getPrev = arrayOfPositions.fetch(arrayOfPositions.length-1).to_i
+    end
+  end
+
+  def getNext(currentPosition, arrayOfPositions)
+    index = arrayOfPositions.index(currentPosition)
+    unless index == (arrayOfPositions.length - 1)
+      getNext = arrayOfPositions.fetch(index + 1).to_i
+    else
+      getNext = arrayOfPositions.fetch(0).to_i
     end
   end
 

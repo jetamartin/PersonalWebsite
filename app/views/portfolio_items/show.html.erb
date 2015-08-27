@@ -25,8 +25,12 @@
         <div class="container">
             <section class="portfolio-navigation section type2">
                 <ul class="portfolio-navigation-list">
-                    <li><a href="#">&laquo; &nbsp; Previous</a></li>
-                    <li><a href="#">Next &nbsp; &raquo;</a></li>
+                    <li>
+                      <%= link_to("<span>&laquo;&nbsp;Previous</span>".html_safe, portfolio_item_path(getPrev(@portfolio_item_id, @listOfPortfolioIds))) %>
+                    </li>
+                    <li>
+                      <%= link_to("<span>Next&nbsp;&raquo;</span>".html_safe, portfolio_item_path(getNext(@portfolio_item_id, @listOfPortfolioIds)))%>
+                    </li>
                 </ul>
             </section>
             <!-- /.portfolio-navigation -->
