@@ -374,7 +374,7 @@
 
 
 
-<!-- /#caroufredsel-portfolio -->
+<!-- /#caroufredsel-blog -->
 <div class="container">
 <!-- /#action-box -->
 <section id="blog-posts" class="section type3">
@@ -409,8 +409,10 @@
                           <%= image_tag("#{blogPost.blog_pic}", class:"img-responsive img-thumbnail")%>
                           <div class="image-overlay"></div>
                             <a href="#" data-rel="prettyPhoto" class="ima-zoom"><i class="fa fa-plus"></i></a>
-                            <a href="post-item-1.html" class="post-link"><i class="fa fa-link"></i></a>
+                            <%= link_to("<span class='fa fa-link'></span>".html_safe, blog_post_path(blogPost.id), class:"post-link")%>
+                            <!-- <a href="post-item-1.html" class="post-link"><i class="fa fa-link"></i></a> -->
                         </div>
+
                         <!-- /.entry-thumb -->
                         <div class="entry-wrap">
                             <div class="entry-meta">
