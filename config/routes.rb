@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :blog_posts do
     resources :comments, only: [:index, :create]
   end
+  # Added route so that correct "relative" path (e.g., /assets/xyz.jpg) is generated to display photo for prettyPhoto
+  # without this routed...lin_to helper just generates xyz.jpg as href..so image is not found
+  get '/assets/(:id)', to: 'assets#show', as: 'asset'
+
 
   # Added per http://matharvard.ca/posts/2014/jan/11/contact-form-in-rails-4/
   # To have everything under, /contact. I added two lines in my config/routes.rb to accomplish that.

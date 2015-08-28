@@ -169,15 +169,12 @@
                             <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper artwork creative">
                                 <div class="portfolio-item type2">
                                     <div class="portfolio-thumb">
-                                    <%= image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive", alt:"Portfolio Thumb")%>
+                                    <%= image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail", alt:"Portfolio Thumb")%>
                                       <div class="image-overlay"></div>
-                                      <%#= link_to "<span class='fa fa-eye'></span>".html_safe, portfolio_item_path(@portfolio_item.id), class: "portfolio-zoom", data-rel"=>"prettyPhoto" %>
-                                      <%#= link_to "<i class='fa fa-eye'></i>".html_safe, image_tag("#{@portfolio_item.primary_image_path}"), class:"portfolio-zoom", 'data-rel'=>"prettyPhoto" %>
-                                      <a href="portfolioItem.primary_image" data-rel="prettyPhoto" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                      <%= link_to("<span class='fa fa-eye'></span>".html_safe, asset_path(portfolioItem.primary_image_path), class: "portfolio-zoom", :"data-rel"=> "prettyPhoto") %>
+                                      <!-- <a href="portfolioItem.primary_image" data-rel="prettyPhoto" class="portfolio-zoom"><i class="fa fa-eye"></i></a> -->
                                       <%= link_to("<span class='fa fa-link'></span>".html_safe, portfolio_item_path(portfolioItem.id), class:"portfolio-link")%>
-
-                                      <!-- <a href="images/Stanford.jpg" data-rel="prettyPhoto" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
-                                      <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a> -->
+                                        <!-- <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a> --> 
                                     </div>
                                     <div class="portfolio-details">
                                       <div class="portfolio-meta">

@@ -5,6 +5,7 @@ gem 'closure_tree'
 gem 'bootstrap-sass'
 # gem 'acts_as_tree'
 
+
 # Added per http://www.gotealeaf.com/blog/handling-emails-in-rails
 gem 'figaro'
 
