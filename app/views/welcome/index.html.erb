@@ -243,10 +243,12 @@
           <section id="caroufredsel-portfolio" class="section type3">
           <div class="row cnbox">
               <div class="col-md-4">
+                <%= link_to portfolio_items_path do %>
                   <div class="cbox">
                       <h3 class="cbox-title">Recent Portfolio Items</h3>
                       <span class="cbox-counter"><%= "#{@portfolio_items.count}+"%></span>
                   </div>
+                <% end %>
               </div>
               <div class="col-md-8">
                   <div class="nbox">

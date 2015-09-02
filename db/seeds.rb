@@ -104,7 +104,7 @@ PortfolioItem.create(
 
 PortfolioItem.create(
   date: 'December 1, 2014',
-  title: "General Electronics",
+  title: "General Electric",
   subtitle: "This is the subtitle for this website",
   primary_image_path: "ge.jpg",
   body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
@@ -158,7 +158,7 @@ PortfolioItem.create(
   body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
   <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
   <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
-  website_link: "www.portfolioItems.com",
+  website_link: "http://bpcreates.squarespace.com/",
   project_type: "Commercial"
 )
 
@@ -172,6 +172,18 @@ PortfolioItem.create(
   <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
   website_link: "www.puma.com",
   project_type: "Commercial"
+)
+
+PortfolioItem.create(
+  date: 'May 1, 2015',
+  title: "JM Web Design",
+  subtitle: "This is the subtitle for this website",
+  primary_image_path: "jetamartin.jpg",
+  body: "<p>Lorem ipsum dolor sit amet, vis principes interpretaris cu. His eu quem impedit percipit, ut dolorum posidonium sea. Intellegebat definitionem te eam. Ex pri quod omnes contentiones, an has fuisset theophrastus, id eum labore omnesque. Cu quod habeo constituam est, regione scribentur nec ex. Mea ad rebum inimicus, usu ne labore regione deterruisset, vix stet imperdiet te.</p><p>Ne sit movet simul sensibus. Utamur philosophia est id, an nam nisl scripserit. Elit minimum interesset nec ex. His euismod principes no, mel delenit argumentum in. In mel hinc natum, duo menandri vulputate ea, vim et quidam commodo partiendo. Volumus postulant te sit.</p>
+  <p>Est eErat mediocrem complectitur vim id. Soluta perpetua ea has, an fugit commune legendos ius, mel eu omnesque postulant gloriatur.a assum aeque, ponderum quaestio sed at. Eu vim ocurreret repudiare, nihil munere sea et, in justo placerat est. Has zril nominati mnesarchum ea. In impetus maiorum tincidunt sit, pro ex feugait iracundia, his vocibus admodum no. Cu hinc luptatum ius, id erant impetus eligendi ius.</p>
+  <p>His te unum ludus epicuri, torquatos moderatius instructior vix ut. Mel ei cibo modus elitr, at omnis graecis docendi sit. His at animal minimum electram, sint labore nec ut. Aliquid intellegam est cu, et per laudem latine apeirian. Vix cu reque fastidii, facer prompta no nam, civibus consequat et quo. Sed invenire maiestatis definitiones ut.</p>",
+  website_link: "www.jetamartin.com",
+  project_type: "Personal"
 )
 
 PortfolioImage.create(
@@ -348,6 +360,30 @@ PortfolioImage.create(
   title: "Kids",
   subtitle: "Puma Kid's wear"
 )
+PortfolioImage.create(
+  portfolio_item_id: 11,
+  image_path: "JetAboutMe.jpg",
+  title: "About Me",
+  subtitle: "How I work with clients"
+)
+PortfolioImage.create(
+  portfolio_item_id: 11,
+  image_path: "JetPortfolioSection.jpg",
+  title: "Portfolio Section",
+  subtitle: "A little about my Portfolio projects"
+)
+PortfolioImage.create(
+  portfolio_item_id: 11,
+  image_path: "JetBlogSection.jpg",
+  title: "Blog Section",
+  subtitle: "A list of my blog sections"
+)
+PortfolioImage.create(
+  portfolio_item_id: 11,
+  image_path: "JetContactSection.jpg",
+  title: "Contact Section",
+  subtitle: "Basic Contact Form"
+)
 Comment.create(
   blog_post_id: 1,
   name: "Bill Jones",
@@ -368,5 +404,34 @@ Comment.create(
   email: "fredJohnson@yahoo.com",
   message: "This is the first comment for blog post 2"
 )
-
+PortfolioCategory.create(
+  category: "SmallBiz"
+)
+PortfolioCategory.create(
+  category: "MediumBiz"
+)
+PortfolioCategory.create(
+  category: "LargeBiz"
+)
+PortfolioCategory.create(
+  category: "ForProfit"
+)
+PortfolioCategory.create(
+  category: "NonProfit"
+)
+PortfolioCategory.create(
+  category: "Personal"
+)
+PortfolioCategory.create(
+  category: "Technology"
+)
+PortfolioCategory.create(
+  category: "Retail"
+)
+PortfolioCategory.create(
+  category: "Product"
+)
+PortfolioCategory.create(
+  category: "Services"
+)
 end

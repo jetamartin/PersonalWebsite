@@ -1,35 +1,253 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Portfolio Items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Website link</th>
-      <th>Project type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @portfolio_items.each do |portfolio_item| %>
-      <tr>
-        <td><%= portfolio_item.date %></td>
-        <td><%= portfolio_item.title %></td>
-        <td><%= portfolio_item.body %></td>
-        <td><%= portfolio_item.website_link %></td>
-        <td><%= portfolio_item.project_type %></td>
-        <td><%= link_to 'Show', portfolio_item %></td>
-        <td><%= link_to 'Edit', edit_portfolio_item_path(portfolio_item) %></td>
-        <td><%= link_to 'Destroy', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Portfolio item', new_portfolio_item_path %>
+<div id="main" class="wrapper">
+    <div class="container">
+        <section class="portfolio-filter section type2">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#" data-filter="*">All</a></li>
+                <li><a href="#" data-filter=".smallbiz">SmallBiz</a></li>
+                <li><a href="#" data-filter=".mediumbiz">MediumBiz</a></li>
+                <li><a href="#" data-filter=".largebiz">LargeBiz</a></li>
+                <li><a href="#" data-filter=".forprofit">ForProfit</a></li>
+                <li><a href="#" data-filter=".nonprofit">NonProfit</a></li>
+                <li><a href="#" data-filter=".personal">Personal</a></li>
+                <li><a href="#" data-filter=".technology">Technology</a></li>
+                <li><a href="#" data-filter=".retail">Retail</a></li>
+                <li><a href="#" data-filter=".product">Product</a></li>
+                <li><a href="#" data-filter=".service">Servicel</a></li>
+            </ul>
+        </section>
+        <!-- /.portfolio-filter -->
+        <section class="portfolio section type3">
+            <div class="row">
+                <div class="portfolio-container">
+                  <% @portfolio_items.each do |portfolioItem| %>
+                  <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item-wrapper artwork creative">
+                    <div class="portfolio-item type2">
+                      <div class="portfolio-thumb">
+                      <%= image_tag("#{portfolioItem.primary_image_path}", class:"img-responsive img-thumbnail", alt:"Portfolio Thumb")%>
+                        <div class="image-overlay"></div>
+                        <%= link_to("<span class='fa fa-eye'></span>".html_safe, asset_path(portfolioItem.primary_image_path), class: "portfolio-zoom", :"data-rel"=> "prettyPhoto") %>
+                        <!-- <a href="portfolioItem.primary_image" data-rel="prettyPhoto" class="portfolio-zoom"><i class="fa fa-eye"></i></a> -->
+                        <%= link_to("<span class='fa fa-link'></span>".html_safe, portfolio_item_path(portfolioItem.id), class:"portfolio-link")%>
+                          <!-- <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a> -->
+                      </div>
+                      <div class="portfolio-details">
+                        <div class="portfolio-meta">
+                          <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp;<%=portfolioItem.date%></a></span>
+                          <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                        </div>
+                        <h5 class="portfolio-title"><a href=""><%=portfolioItem.subtitle%></a></h5>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- /.portfolio-item-wrapper -->
+                  <% end %>
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper nature outside">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img2.jpg" class="img-responsive" alt="2nd Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img2.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Eu decore iisque sit.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper photography artwork">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img3.jpg" class="img-responsive" alt="3rd Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img3.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Illum dolorum accommodare.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper creative nature">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img4.jpg" class="img-responsive" alt="4th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img4.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Eu aeque nusquam mea, ne est.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper nature">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img5.jpg" class="img-responsive" alt="5th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img5.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Mei no modo vitae mentitum.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper artwork creative">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img6.jpg" class="img-responsive" alt="6th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img6.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Ludus periculis mediocritatem.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper nature outside">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img7.jpg" class="img-responsive" alt="7th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img7.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">An vidit mucius animal eam.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper photography artwork">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img8.jpg" class="img-responsive" alt="8th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img8.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Vis nibh zril pertinacia no.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper creative nature">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img9.jpg" class="img-responsive" alt="9th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img9.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Ex veniam philosophia nam.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper nature">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img10.jpg" class="img-responsive" alt="10th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img10.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Facer volumus ei his.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper artwork creative">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img11.jpg" class="img-responsive" alt="11th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img11.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Nam timeam noluisse ad.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 portfolio-item-wrapper nature outside">
+                        <div class="portfolio-item type2">
+                            <div class="portfolio-thumb">
+                                <img src="img/general/img12.jpg" class="img-responsive" alt="12th Portfolio Thumb">
+                                <div class="image-overlay"></div>
+                                <a href="img/general/img12.jpg" data-rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                                <a href="portfolio-item-1.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="portfolio-details">
+                                <div class="portfolio-meta">
+                                    <span class="portfolio-date"><i class="fa fa-clock-o"></i> <a href="#">&nbsp; 21 August, 2014</a></span>
+                                    <span class="portfolio-likes"><i class="fa fa-heart-o"></i> <a href="#">&nbsp; 17</a></span>
+                                </div>
+                                <h5 class="portfolio-title"><a href="">Ea animal facilisi patrioque pri.</a></h5>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- /.portfolio-item-wrapper -->
+                </div>
+                <!-- /.portfolio-container -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.portfolio -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /#main -->
