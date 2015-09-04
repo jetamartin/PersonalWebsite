@@ -1,11 +1,12 @@
 class PortfolioItemsController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
-  helper_method :getNext, :getPrev
+  helper_method :getNext, :getPrev, :getCategoryValues
 
   # GET /portfolio_items
   # GET /portfolio_items.json
   def index
     @portfolio_items = PortfolioItem.all
+
   end
 
   # GET /portfolio_items/1
@@ -92,6 +93,16 @@ class PortfolioItemsController < ApplicationController
     end
   end
 
+  def getCategoryValues (portfolioItem)
+    # byebug
+    getCategoryValues = [];
+    categoryValues = [];
+    portfolioItem.categories.each do |p|
+      categoryValues << p.category
+    end
+    getCategoryValues = categoryValues.join(" ");
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_portfolio_item
@@ -100,6 +111,6 @@ class PortfolioItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_item_params
-      params.require(:portfolio_item).permit(:date, :title, :body, :website_link, :project_type, :portfolio_category_ids => [])
+      params.require(:portfolio_item).permit(:date, :title, :body, :website_link, :project_type, :category_ids => [])
     end
 end

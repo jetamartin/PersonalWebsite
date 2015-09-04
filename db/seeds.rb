@@ -17,7 +17,8 @@ BlogPost.create(
  tags: "CSS HTML",
  blog_pic: "dots.jpg",
  article_link: "www.google.com",
- author: "Jet Martin")
+ author: "Jet Martin"
+ )
 
 BlogPost.create(
   date: 'May 1, 2015',
@@ -54,7 +55,7 @@ BlogPost.create(
 
  # Portfolio Items
 
-PortfolioItem.create(
+oglivy = PortfolioItem.create(
   date: 'August 1, 2014',
   title: "OgilvyOne Worldwide",
   subtitle: "This is the subtitle for this website",
@@ -66,7 +67,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+stanford = PortfolioItem.create(
   date: 'September 1, 2014',
   title: "Stanford University",
   subtitle: "This is the subtitle for this website",
@@ -78,7 +79,7 @@ PortfolioItem.create(
   project_type: "Academic"
 )
 
-PortfolioItem.create(
+jj = PortfolioItem.create(
   date: 'October 1, 2014',
   title: "Johnson & Johnson",
   subtitle: "This is the subtitle for this website",
@@ -90,7 +91,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+genentech = PortfolioItem.create(
   date: 'November 1, 2014',
   title: "Genentech",
   subtitle: "This is the subtitle for this website",
@@ -102,7 +103,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+ge = PortfolioItem.create(
   date: 'December 1, 2014',
   title: "General Electric",
   subtitle: "This is the subtitle for this website",
@@ -114,7 +115,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+uCast = PortfolioItem.create(
   date: 'January 1, 2015',
   title: "uCast",
   subtitle: "This is the subtitle for this website",
@@ -126,7 +127,7 @@ PortfolioItem.create(
   project_type: "Comercial"
 )
 
-PortfolioItem.create(
+customToronto = PortfolioItem.create(
   date: 'February 1, 2015',
   title: "Custom Toronto",
   subtitle: "This is the subtitle for this website",
@@ -138,7 +139,7 @@ PortfolioItem.create(
   project_type: "Comercial"
 )
 
-PortfolioItem.create(
+mdSecurity = PortfolioItem.create(
   date: 'March 1, 2015',
   title: "Maryland Security",
   subtitle: "This is the subtitle for this website",
@@ -150,7 +151,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+bluePixel = PortfolioItem.create(
   date: 'April 1, 2015',
   title: "Blue Pixel",
   subtitle: "This is the subtitle for this website",
@@ -162,7 +163,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+puma = PortfolioItem.create(
   date: 'May 1, 2015',
   title: "Puma",
   subtitle: "This is the subtitle for this website",
@@ -174,7 +175,7 @@ PortfolioItem.create(
   project_type: "Commercial"
 )
 
-PortfolioItem.create(
+jm = PortfolioItem.create(
   date: 'May 1, 2015',
   title: "JM Web Design",
   subtitle: "This is the subtitle for this website",
@@ -404,34 +405,51 @@ Comment.create(
   email: "fredJohnson@yahoo.com",
   message: "This is the first comment for blog post 2"
 )
-PortfolioCategory.create(
-  category: "SmallBiz"
+smallBiz = Category.create(
+  category: "smallBiz"
 )
-PortfolioCategory.create(
-  category: "MediumBiz"
+mediumBiz = Category.create(
+  category: "mediumBiz"
 )
-PortfolioCategory.create(
-  category: "LargeBiz"
+largeBiz = Category.create(
+  category: "largeBiz"
 )
-PortfolioCategory.create(
-  category: "ForProfit"
+forProfit = Category.create(
+  category: "forProfit"
 )
-PortfolioCategory.create(
-  category: "NonProfit"
+nonProfit = Category.create(
+  category: "nonProfit"
 )
-PortfolioCategory.create(
-  category: "Personal"
+personal = Category.create(
+  category: "personal"
 )
-PortfolioCategory.create(
-  category: "Technology"
+technology = Category.create(
+  category: "technology"
 )
-PortfolioCategory.create(
-  category: "Retail"
+retail = Category.create(
+  category: "retail"
 )
-PortfolioCategory.create(
-  category: "Product"
+product = Category.create(
+  category: "product"
 )
-PortfolioCategory.create(
-  category: "Services"
+services = Category.create(
+  category: "services"
 )
+oglivy.categories = [smallBiz, forProfit, technology, product, services]
+stanford.categories = [mediumBiz, forProfit, services]
+jj.categories = [largeBiz, forProfit, technology, product, services]
+genentech.categories = [mediumBiz, forProfit, technology,  services]
+ge.categories = [largeBiz, forProfit, technology, product, services]
+uCast.categories = [smallBiz, forProfit, technology, product]
+customToronto.categories = [smallBiz, forProfit, retail, product]
+mdSecurity.categories = [smallBiz, forProfit, technology, services]
+bluePixel.categories = [smallBiz, forProfit, technology, services]
+puma.categories = [largeBiz, forProfit,  product]
+jm.categories = [smallBiz, forProfit, personal, services]
+
+# CategoryPortfolioItem.create(
+#   category_id: 1,
+#   portfolio_item_id: 1
+# )
+
 end

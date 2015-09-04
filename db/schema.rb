@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901040508) do
+ActiveRecord::Schema.define(version: 20150902211923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 20150901040508) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.text     "overview"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_portfolio_items", id: false, force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "portfolio_item_id"
   end
 
   create_table "comment_hierarchies", id: false, force: :cascade do |t|
@@ -66,17 +77,6 @@ ActiveRecord::Schema.define(version: 20150901040508) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "portfolio_categories", force: :cascade do |t|
-    t.string   "category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "portfolio_categories_portfolio_items", force: :cascade do |t|
-    t.integer "portfolio_item_id"
-    t.integer "portfolio_category_id"
   end
 
   create_table "portfolio_images", force: :cascade do |t|

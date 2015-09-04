@@ -156,37 +156,42 @@ var caroufredsel = function () {
 	});
 };
 
+$(window).load(function () {
+	// Isotope Portfolio per http://www.9bitstudios.com/2013/04/jquery-isotope-tutorial/
+	var $container = $('.portfolio-container');
+	var $filter = $('.portfolio-filter');
+	$container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+		$('.portfolio-filter a').click(function(){
+	        $('.portfolio-filter .current').removeClass('current');
+	        $(this).addClass('current');
 
-// Isotope Portfolio
-var $container = $('.portfolio-container');
-var $blogcontainer = $('.posts-wrap');
-var $filter = $('.portfolio-filter');
-
-jQuery(window).load(function () {
-		// Bootstrap Carousel -- Tried each of the following lines but neither of them helped
-		// jQuery('.carousel').carousel();
-		// jQuery('#carousel-generic-example').carousel();
+	        var selector = $(this).attr('data-filter');
+	        $container.isotope({
+	            filter: selector,
+	            animationOptions: {
+	                duration: 750,
+	                easing: 'linear',
+	                queue: false
+	            }
+	         });
+	         return false;
+	    });
+			$filter.find('a').click(function () {
+					$filter.find('a').parent().removeClass('active');
+					$(this).parent().addClass('active');
+			});
 
 		caroufredsel();
-		// Initialize Isotope
-		$container.isotope({
-				itemSelector: '.portfolio-item-wrapper'
-		});
 
-		$blogcontainer.isotope({
-				itemSelector: '.article-wrap'
-		});
 
-		$('.portfolio-filter a').click(function () {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector });
-				return false;
-		});
-		$filter.find('a').click(function () {
-				$filter.find('a').parent().removeClass('active');
-				$(this).parent().addClass('active');
-		});
-
+	});
 
 	$(window).smartresize(function () {
 		$container.isotope('reLayout');
@@ -196,5 +201,3 @@ jQuery(window).load(function () {
 	$(window).resize(function () {
 		caroufredsel();
 	});
-
-});

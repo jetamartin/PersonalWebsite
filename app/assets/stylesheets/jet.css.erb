@@ -2044,7 +2044,9 @@ section {
   object-fit: fill;
   float: right;
 }*/
-
+/******************************/
+/* Portfolio Item
+ * -------------------------- */
 .portfolio-item-wrapper {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -2105,9 +2107,7 @@ section {
     font-size: 18px;
     color: #fff;
     display: block;
-    /*color: #59AB02;*/
-    color: #22A7F0;
-
+    color: #59AB02;
 }
 
 .portfolio-item .portfolio-thumb .portfolio-zoom:hover, .portfolio-item .portfolio-thumb .portfolio-link:hover {
@@ -2161,13 +2161,13 @@ section {
 }
 
 .portfolio-meta a:hover, .portfolio-metaa:focus {
-    /*color: #59AB02;*/
-    color: #22A7F0;
+    color: #59AB02;
 }
 
 .portfolio-likes {
     float: right;
 }
+
 
 /* Portfolio Item
  * -------------------------- */
@@ -2228,7 +2228,24 @@ section {
 .portfolio-navigation-list li:first-child {
     float: left;
 }
+/* Portfolio Filter
+ * -------------------------- */
+.portfolio-filter {
+    text-transform: uppercase;
+    font-size: 11px;
+}
 
+.portfolio-filter .nav-pills > li > a {
+    border-radius: 2px;
+    font-weight: 700;
+    color: #7f8c8d;
+}
+
+.portfolio-filter .nav-pills > li.active > a, .portfolio-filter .nav-pills > li.active > a:hover, .portfolio-filter .nav-pills > li.active > a:focus {
+    border-color: #59AB02;
+    background-color: #59AB02;
+    color: #ffffff;
+}
 
 /**/
 .controls {
@@ -2357,6 +2374,8 @@ http://stackoverflow.com/questions/20639825/bootstrap-3-carousel-not-working */
     position: absolute;
     bottom: 0px;
 }
+/******************************************************************/
+/*            Check this                                          */
 /*****************************************************************/
 .portfolio-img {
   width: 100%;
@@ -2369,16 +2388,80 @@ http://stackoverflow.com/questions/20639825/bootstrap-3-carousel-not-working */
  font-size:large;
  font-weight:bold;
 }
-.blockLink
-{
-    position:absolute;
-    top:0;
-    left: 0;
-    width:100%;
-    height:100%;  
-    z-index: 1;
-    background-color:#ffffff;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity:0;
+
+ Isotope Animating
+ /* -------------------------- */
+ .portfolio-filter a { 
+    margin-right: 10px;
+    color:#666;
+    text-decoration:none;
 }
+
+.portfolioFilter a.current {
+    font-weight:bold;
+}
+
+/*img {
+    margin:5px;
+}*/
+
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+/*.isotope, .isotope .isotope-item {*/
+    /* change duration value to whatever you like */
+    /*-webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+}*/
+
+/**** disabling Isotope CSS3 transitions ****/
+
+/*.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+}*/
